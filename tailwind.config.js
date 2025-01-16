@@ -16,8 +16,10 @@ module.exports = {
           dark: "#005CA1",
         },
         magenta: "#EB526E",
-        info: "#04B1AA",
-        green: "#A2C746",
+        green: {
+          title: "#04B1AA",
+          text: "#A2C746",
+        },
         dark: "#252525",
         gray: {
           default: "#A9A8A8",

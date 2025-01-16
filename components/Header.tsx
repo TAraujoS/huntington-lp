@@ -18,7 +18,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="bg-white border-b h-20 border-gray-200 shadow-sm lg:px-20">
+    <header className="bg-white border-b h-20 border-gray-200 shadow-sm xl:px-20">
       <div className="w-full flex h-full items-center justify-between py-5 px-4 md:px-8">
         <button
           className="lg:hidden p-2 text-gray-700"
