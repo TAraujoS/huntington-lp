@@ -19,7 +19,7 @@ interface MenuMobileProps {
 export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
   return (
     <div
-      className={`fixed h-20 inset-0 bg-white z-50 transform ${
+      className={`fixed h-22 inset-0 bg-white z-50 transform ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out`}
     >
@@ -34,7 +34,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
 
         <div className="flex items-center justify-center">
           <Image
-            src="/logo.svg"
+            src="../assets/logo.svg"
             alt="Logo"
             width={100}
             height={100}
