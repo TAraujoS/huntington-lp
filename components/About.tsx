@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 export const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 gap-4">
+    <section className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 gap-4 max-w-7xl mx-auto">
       <div className="hidden lg:block lg:w-1/2 xl:w-1/3 lg:pl-10">
         <Image
           src="/assets/about.png"
@@ -87,7 +87,7 @@ export const About = () => {
               </AccordionContent>
 
               <div className={cn(isOpen ? "w-28" : "w-24")}>
-                <AccordionTrigger className="flex items-center gap-2 text-grey-neutral font-bold text-sm hover:no-underline focus:ring-0 focus:outline-none pb-0">
+                <AccordionTrigger className="flex items-center gap-2 text-grey-neutral font-bold text-sm underline focus:ring-0 focus:outline-none pb-0">
                   <span>{isOpen ? "LER MENOS" : "LER MAIS"}</span>
                 </AccordionTrigger>
               </div>
