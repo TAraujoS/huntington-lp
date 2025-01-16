@@ -10,6 +10,7 @@ import {
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface MenuMobileProps {
   isOpen: boolean;
@@ -19,9 +20,10 @@ interface MenuMobileProps {
 export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
   return (
     <div
-      className={`fixed h-22 inset-0 bg-white z-50 transform ${
+      className={cn(
+        "fixed h-22 inset-0 bg-white z-50 transform transition-transform duration-300 ease-in-out",
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } transition-transform duration-300 ease-in-out`}
+      )}
     >
       <div className="flex items-center justify-between border-b border-gray-200 py-4 px-4">
         <button
