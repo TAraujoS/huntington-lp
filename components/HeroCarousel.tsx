@@ -25,14 +25,9 @@ export const HeroCarousel = () => {
 
   const carouselImages = [
     {
-      srcMobile: "/assets/hero-mobile-1.png",
-      srcDesktop: "/assets/hero-desktop-1.png",
+      srcMobile: "/assets/hero-mobile-1.svg",
+      srcDesktop: "/assets/hero-desktop-1.svg",
       alt: "Banner ProFiv 1",
-    },
-    {
-      srcMobile: "/assets/hero-mobile-1.png",
-      srcDesktop: "/assets/hero-desktop-1.png",
-      alt: "Banner ProFiv 2",
     },
   ];
 
@@ -45,7 +40,7 @@ export const HeroCarousel = () => {
         slidesPerView={1}
         loop={true}
         navigation
-        className="my-swiper"
+        className="hero-swiper"
       >
         {carouselImages.map((image, index) => (
           <SwiperSlide key={index}>

@@ -71,9 +71,26 @@ body {
   }
 }
 
-.my-swiper {
+.hero-swiper {
   --swiper-navigation-color: #717171;
   --swiper-navigation-size: 15px;
   --swiper-pagination-bullet-inactive-color: #ffffff;
   --swiper-pagination-bullet-inactive-opacity: 0.8;
+}
+
+.middle-swiper {
+  --swiper-navigation-color: #717171;
+  --swiper-navigation-size: 15px;
+  --swiper-navigation-top-offset: 30%;
+  --swiper-navigation-sides-offset: 0px;
+  --swiper-pagination-bullet-inactive-color: #A9A8A8;
+  --swiper-pagination-bullet-inactive-opacity: 0.8;
+  --swiper-pagination-top: 90px;
+}
+
+@media (min-width: 768px) {
+  .middle-swiper {
+    --swiper-navigation-top-offset: 35%;
+    --swiper-pagination-top: 100px;
+  }
 }

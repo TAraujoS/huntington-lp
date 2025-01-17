@@ -15,7 +15,7 @@ export const InfraSection = () => {
   const [isSecondOpen, setIsSecondOpen] = useState(false);
 
   return (
-    <section className="bg-blue-extralight p-10 md:px-20 xl:flex xl:flex-col xl:items-center mb-10">
+    <section className="bg-blue-extralight p-10 md:px-20 xl:flex xl:flex-col xl:items-center">
       <div className="flex flex-col items-center justify-center gap-4 max-w-7xl">
         <h2 className="text-blue-default text-lg font-semibold">
           INFRAESTRUTURA
@@ -33,7 +33,7 @@ export const InfraSection = () => {
           <div className="flex flex-col gap-4 text-gray-neutral font-normal text-sm mt-6 bg-white py-12 px-8 md:px-10 w-11/12 mx-auto lg:w-full">
             <div className="w-full mb-2">
               <Image
-                src="/assets/infra-1.png"
+                src="/assets/infra-1.svg"
                 alt="Imagem equipamento Incubadora"
                 width={500}
                 height={300}
@@ -87,7 +87,7 @@ export const InfraSection = () => {
           <div className="flex flex-col gap-4 text-gray-neutral font-normal text-sm mt-6 bg-white py-12 px-8 md:px-10 w-11/12 mx-auto lg:w-full">
             <div className="w-full mb-2">
               <Image
-                src="/assets/infra-2.png"
+                src="/assets/infra-2.svg"
                 alt="Imagem MAIA"
                 width={500}
                 height={300}
@@ -96,7 +96,7 @@ export const InfraSection = () => {
               />
             </div>
 
-            <h3 className="text-base font-semibold text-magenta inline">
+            <h3 className="text-base font-semibold text-magenta-text inline">
               MAIA: INTELIGÊNCIA ARTIFICIAL
               <p className="text-gray-neutral inline"> DO GRUPO HUNTINGTON</p>
             </h3>
