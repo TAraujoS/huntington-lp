@@ -11,13 +11,34 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 interface MenuMobileProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const proceduresContent = [
+  "FERTILIZAÇÃO IN VITRO",
+  "CONGELAMENTO DE ÓVULOS",
+  "INSEMINAÇÃO INTRAUTRINA",
+  "ONCOFERTILIDADE",
+  "OVODOAÇÃO",
+];
+
 export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
+  const pathname = usePathname();
+
+  const handleNavigation = (href: string) => {
+    if (pathname !== "/") {
+      window.location.href = `/${href}`;
+    } else {
+      const element = document.getElementById(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   return (
     <div
       className={cn(
@@ -61,14 +82,22 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
             </AccordionTrigger>
             <AccordionContent>
               <Link
-                href="/quem-somos/historia"
+                href="#quem-somos"
                 className="block text-gray-neutral font-normal text-xs hover:text-primary py-1"
+                onClick={() => {
+                  onClose();
+                  handleNavigation("#quem-somos");
+                }}
               >
                 SOBRE NÓS
               </Link>
               <Link
-                href="/quem-somos/missao"
+                href="#infraestrutura"
                 className="block text-gray-neutral font-normal text-xs hover:text-primary py-2"
+                onClick={() => {
+                  onClose();
+                  handleNavigation("#infraestrutura");
+                }}
               >
                 INFRAESTRUTURA
               </Link>
@@ -78,8 +107,12 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
 
         <div className="border-b border-gray-200 py-4">
           <Link
-            href="/infertilidade"
+            href="#infertilidade"
             className="block text-gray-neutral font-bold text-xs hover:text-primary"
+            onClick={() => {
+              onClose();
+              handleNavigation("#infertilidade");
+            }}
           >
             INFERTILIDADE
           </Link>
@@ -91,26 +124,31 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
               PROCEDIMENTOS
             </AccordionTrigger>
             <AccordionContent>
-              <Link
-                href="/procedimentos/consulta"
-                className="block text-gray-neutral font-normal text-xs hover:text-primary py-2"
-              >
-                CONSULTAS
-              </Link>
-              <Link
-                href="/procedimentos/cirurgias"
-                className="block text-gray-neutral font-normal text-xs hover:text-primary py-1"
-              >
-                CIRURGIAS
-              </Link>
+              {proceduresContent.map((item, index) => (
+                <Link
+                  key={index}
+                  href="#procedimentos"
+                  onClick={() => {
+                    onClose();
+                    handleNavigation("#procedimentos");
+                  }}
+                  className="block text-gray-neutral font-normal text-xs hover:text-primary py-2"
+                >
+                  {item}
+                </Link>
+              ))}
             </AccordionContent>
           </AccordionItem>
         </Accordion>
 
         <div className="border-b border-gray-200 py-4">
           <Link
-            href="/equipe"
+            href="#equipe"
             className="block text-gray-neutral font-bold text-xs hover:text-primarypy-2"
+            onClick={() => {
+              onClose();
+              handleNavigation("#equipe");
+            }}
           >
             EQUIPE
           </Link>
@@ -121,7 +159,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
             variant="default"
             className="w-28 bg-blue-default text-white font-black text-sm hover:bg-blue-dark"
           >
-            AGENDAR
+            <Link href="/agendar">AGENDAR </Link>
           </Button>
         </div>
       </div>

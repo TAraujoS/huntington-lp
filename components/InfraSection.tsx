@@ -15,7 +15,10 @@ export const InfraSection = () => {
   const [isSecondOpen, setIsSecondOpen] = useState(false);
 
   return (
-    <section className="bg-blue-extralight p-10 md:px-20 xl:flex xl:flex-col xl:items-center">
+    <section
+      id="infraestrutura"
+      className="bg-blue-extralight p-10 md:px-20 xl:flex xl:flex-col xl:items-center"
+    >
       <div className="flex flex-col items-center justify-center gap-4 max-w-7xl">
         <h2 className="text-blue-default text-lg font-semibold">
           INFRAESTRUTURA

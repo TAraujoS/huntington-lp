@@ -13,7 +13,10 @@ import { cn } from "@/lib/utils";
 export const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 gap-4 max-w-7xl mx-auto">
+    <section
+      id="quem-somos"
+      className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 gap-4 max-w-7xl mx-auto"
+    >
       <div className="hidden lg:block lg:w-1/2 xl:w-1/3 lg:pl-10">
         <Image
           src="/assets/about.png"

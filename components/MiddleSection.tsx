@@ -26,7 +26,10 @@ export const MiddleSection = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center p-10 md:px-20 py-8 gap-4 max-w-7xl mx-auto">
+    <section
+      id="infertilidade"
+      className="flex flex-col items-center justify-center p-10 md:px-20 py-8 gap-4 max-w-7xl mx-auto"
+    >
       <h2 className="text-blue-default text-lg font-semibold my-2">
         INFERTILIDADE
       </h2>

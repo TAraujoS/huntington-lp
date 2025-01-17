@@ -6,16 +6,28 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { MenuMobile } from "./MenuMobile";
+import { usePathname } from "next/navigation";
 
 export const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navItems = [
-    { label: "QUEM SOMOS", href: "/quem-somos" },
-    { label: "INFERTILIDADE", href: "/infertilidade" },
-    { label: "PROCEDIMENTOS", href: "/procedimentos" },
-    { label: "EQUIPE", href: "/equipe" },
+    { label: "QUEM SOMOS", href: "#quem-somos" },
+    { label: "INFERTILIDADE", href: "#infertilidade" },
+    { label: "PROCEDIMENTOS", href: "#procedimentos" },
+    { label: "EQUIPE", href: "#equipe" },
   ];
+  const handleNavigation = (href: string) => {
+    if (pathname !== "/") {
+      window.location.href = `/${href}`;
+    } else {
+      const element = document.getElementById(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <header className="bg-white border-b h-20 border-gray-200 shadow-sm xl:px-20">
@@ -44,13 +56,13 @@ export const Header = () => {
 
         <nav className="hidden lg:flex justify-between w-3/5 space-x-8">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.label}
-              href={item.href}
+              onClick={() => handleNavigation(item.href)}
               className="text-gray-neutral font-semibold text-sm hover:text-blue-default"
             >
               {item.label}
-            </Link>
+            </button>
           ))}
         </nav>
 
