@@ -1,6 +1,101 @@
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
+
+export const navItems = [
+  { label: "QUEM SOMOS", href: "#quem-somos" },
+  { label: "INFERTILIDADE", href: "#infertilidade" },
+  { label: "PROCEDIMENTOS", href: "#procedimentos" },
+  { label: "EQUIPE", href: "#equipe" },
+];
+
+export const proceduresContent = [
+  {
+    id: 1,
+    title: "FERTILIZAÇÃO IN VITRO (FIV)",
+    icon: "/assets/procedure-icon-1.svg",
+    content:
+      "Conhecida mundialmente como FIV, esta é uma técnica muito utilizada para o tratamento da infertilidade. Para a realização da FIV, é preciso que o casal passe por algumas fases do tratamento. A estimulação ovariana a base de medicamentos ocorre na primeira etapa do tratamento com o objetivo de obter um maior número de óvulos para aumentar as chances de fertilização e gravidez. Em seguida é utilizado o hormônio gonadotrofina coriônica humana (HCG) para desencadear a maturação dos óvulos, que são aspirados dos ovários e, então, identificados e selecionados para se unirem aos espermatozoides em uma cultura in vitro, ou com a injeção direta do espermatozoide no interior do óvulo. Depois de formados, os embriões são colocados em uma estufa, cujas condições ambientais são similares às da tuba uterina, em geral por 120 a 144 horas. Após o crescimento dos embriões, aqueles que apresentarem melhores índices de qualidade serão transferidos para o útero materno, já preparado para recebê-los, ou serão criopreservados para a transferência ao útero da paciente em um ciclo posterior.",
+    image: "/assets/procedure-1.svg",
+    border: "border-magenta-text",
+  },
+  {
+    id: 2,
+    title: "CONGELAMENTO DE ÓVULOS",
+    icon: "/assets/procedure-icon-2.svg",
+    content:
+      "Postergar a gravidez é uma decisão comum entre mulheres que buscam sucesso profissional antes de engravidar. Entretanto, a fertilidade feminina está diretamente ligada à idade. Ao nascer, uma mulher possui cerca de 7 milhões de óvulos, número que diminui significativamente com o passar dos anos, chegando a menos de 25 mil aos 42 anos. Além da quantidade, a qualidade dos óvulos também se deteriora com o tempo devido a fatores ambientais e erros na divisão do material genético. Isso pode dificultar ou até impedir a gestação natural. O congelamento de óvulos é uma opção viável para preservar a fertilidade, especialmente antes dos 35 anos, quando as taxas de gravidez são mais altas. Mulheres que congelam óvulos aos 35 anos mantêm chances semelhantes às de uma mulher dessa idade ao tentar engravidar mais tarde, a partir de embriões formados com os óvulos congelados. Além das chances em si, o congelamento também minimiza os riscos de abortos e condições como a Síndrome de Down, que aumentam com a idade. Quer saber mais? Entre em contato.",
+    image: "/assets/procedure-2.svg",
+    border: "border-orange-text",
+  },
+  {
+    id: 3,
+    title: "INSEMINAÇÃO INTRAUTERINA",
+    icon: "/assets/procedure-icon-3.svg",
+    content:
+      "A inseminação intrauterina é um procedimento que consiste na introdução de espermatozoides diretamente no útero da mulher, aumentando as chances de fertilização. É indicada em casos de problemas de ovulação ou quando há dificuldade na mobilidade dos gametas. O processo envolve a coleta de espermatozoides, que são preparados em laboratório para otimizar a concentração e a motilidade. Após a ovulação, os espermatozoides são inseridos no útero, durante um ciclo menstrual monitorado. Esse método é menos invasivo que a fertilização in vitro e pode ser realizado com esperma do parceiro ou doador. A inseminação intrauterina é uma opção para casais que desejam aumentar suas chances de concepção, especialmente quando fatores como idade ou condições de saúde afetam a fertilidade. O acompanhamento médico é essencial para determinar o momento ideal e avaliar a resposta ao tratamento, garantindo o melhor resultado possível na busca pela gravidez. Saiba mais, agende sua consulta.",
+    image: "/assets/procedure-3.svg",
+    border: "border-green-text",
+  },
+  {
+    id: 4,
+    title: "ONCOFERTILIDADE",
+    icon: "/assets/procedure-icon-4.svg",
+    content:
+      "Antes do início de um tratamento oncológico, é fundamental considerar a preservação da fertilidade, pois os quimioterápicos e radioterápicos podem afetar as células reprodutivas, comprometendo a função dos ovários e testículos – em alguns casos, permanentemente. O ProFIV oferece um programa especializado, onde um médico de reprodução assistida avalia cada caso com atenção e pode planejar o melhor método para preservar a fertilidade, como a criopreservação de óvulos ou embriões, garantindo que a saúde do paciente não seja prejudicada. Atualmente, com os avanços da medicina, a chance de cura de um câncer é muito grande, o que justifica a preocupação com a fertilidade após o tratamento finalizado. Para saber mais, agende sua consulta com um dos nossos especialistas.",
+    image: "/assets/procedure-4.svg",
+    border: "border-blue-default",
+  },
+  {
+    id: 5,
+    title: "OVODOAÇÃO",
+    icon: "/assets/procedure-icon-5.svg",
+    content:
+      "A ovodoação, ou o tratamento com óvulos doados, é indicada principalmente para mulheres com diminuição da reserva ovariana devido à idade avançada, falência ovariana prematura ou tratamentos oncológicos. Muitas vezes, os casais já enfrentaram dificuldades em tentativas anteriores e recorrem à doação como uma opção viável para engravidar. É importante ressaltar que a idade do óvulo é crucial para o sucesso do tratamento, e no ProFIV são priorizadas doadoras de até 35 anos, o que otimiza as chances de gravidez. No nosso programa de ovodoação, a doadora de óvulos passa por um rigoroso protocolo de exames, como sorologias, cariótipo e avaliação do histórico de saúde. Além disso, a identidade tanto da doadora quanto da receptora permanece anônima, garantindo um processo ético e seguro para ambas. Se quiser saber mais sobre o tratamento com óvulos doados, não deixe de entrar em contato conosco e conversar com um especialista.",
+    image: "/assets/procedure-5.svg",
+    border: "border-magenta-text",
+  },
+];
+
+export const faqQuestions = [
+  {
+    question:
+      "Quantos casais sofrem com o problema de infertilidade atualmente?",
+    answer: "A infertilidade atinge cerca de 20% dos casais.",
+  },
+  {
+    question: "Quando um casal é considerado infértil?",
+    answer:
+      "Procuramos não utilizar o termo “casal infértil”. Podemos dizer que após 12 meses de relações sexuais regulares sem uso de método anticoncepcional, há suspeita de que algum fator esteja dificultando a concepção.",
+  },
+  {
+    question: "Qual procedimento o casal deve seguir?",
+    answer:
+      "Aquele casal que apresenta uma dificuldade para engravidar deve ser avaliado de forma individualizada para se buscar as causas do problema. E, para isso, usamos alguns exames de pesquisa básica, como:",
+    list: [
+      "Histerossalpingografia: é a colocação de contraste no interior do útero para possibilitar a visualização da cavidade uterina, permeabilidade e aspecto das trompas.",
+      "Ultrassonografia: permite avaliar o aspecto uterino e ovariano.",
+      "Espermograma: mostra informações sobre quantidade, motilidade e morfologia dos espermatozoides.",
+      "Exames hormonais: é necessário avaliar todos os hormônios que podem influenciar na ovulação ou no transcorrer de uma gravidez.",
+    ],
+  },
+  {
+    question: "O uso de laptop no colo afeta a fertilidade?",
+    answer:
+      "Sim. O calor gerado pelos laptops sobre a cintura masculina pode afetar a qualidade de sêmen, diminuindo sua quantidade e motilidade.",
+  },
+  {
+    question: "Fumar afeta a qualidade do sêmen?",
+    answer:
+      "A qualidade e a quantidade dos espermatozoides produzidos por fumantes ativos podem ser influenciadas por substâncias presentes no tabaco, como a nicotina e o THC, causando prejuízo reprodutivo.",
+  },
+  {
+    question:
+      "Bebês gerados a partir de técnicas de reprodução assistida tendem a nascer prematuros?",
+    answer:
+      "A prematuridade está relacionada a gestações múltiplas. Portanto, uma gravidez única por meio de fertilização in vitro não tem risco aumentado de prematuridade. Já uma gestação múltipla, seja espontânea ou pós-fertilização, tem mais riscos.",
+  },
+];

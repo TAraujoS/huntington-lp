@@ -18,16 +18,16 @@ interface MenuMobileProps {
   onClose: () => void;
 }
 
-const proceduresContent = [
-  "FERTILIZAÇÃO IN VITRO",
-  "CONGELAMENTO DE ÓVULOS",
-  "INSEMINAÇÃO INTRAUTRINA",
-  "ONCOFERTILIDADE",
-  "OVODOAÇÃO",
-];
-
 export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
   const pathname = usePathname();
+
+  const proceduresContent = [
+    "FERTILIZAÇÃO IN VITRO",
+    "CONGELAMENTO DE ÓVULOS",
+    "INSEMINAÇÃO INTRAUTRINA",
+    "ONCOFERTILIDADE",
+    "OVODOAÇÃO",
+  ];
 
   const handleNavigation = (href: string) => {
     if (pathname !== "/") {
@@ -39,6 +39,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
       }
     }
   };
+
   return (
     <div
       className={cn(

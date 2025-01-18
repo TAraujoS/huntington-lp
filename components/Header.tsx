@@ -1,23 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import { MenuMobile } from "./MenuMobile";
-import { usePathname } from "next/navigation";
+import { navItems } from "@/lib/utils";
 
 export const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const navItems = [
-    { label: "QUEM SOMOS", href: "#quem-somos" },
-    { label: "INFERTILIDADE", href: "#infertilidade" },
-    { label: "PROCEDIMENTOS", href: "#procedimentos" },
-    { label: "EQUIPE", href: "#equipe" },
-  ];
   const handleNavigation = (href: string) => {
     if (pathname !== "/") {
       window.location.href = `/${href}`;
@@ -56,13 +51,14 @@ export const Header = () => {
 
         <nav className="hidden lg:flex justify-between w-3/5 space-x-8">
           {navItems.map((item) => (
-            <button
+            <Link
               key={item.label}
+              href={item.href}
               onClick={() => handleNavigation(item.href)}
               className="text-gray-neutral font-semibold text-sm hover:text-blue-default"
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </nav>
 

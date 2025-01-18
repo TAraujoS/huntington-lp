@@ -1,16 +1,24 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { Button } from "./ui/button";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { navItems } from "@/lib/utils";
 
 export const Footer = () => {
-  const navItems = [
-    { label: "QUEM SOMOS", href: "/quem-somos" },
-    { label: "INFERTILIDADE", href: "/infertilidade" },
-    { label: "PROCEDIMENTOS", href: "/procedimentos" },
-    { label: "EQUIPE", href: "/equipe" },
-  ];
+  const pathname = usePathname();
+
+  const handleNavigation = (href: string) => {
+    if (pathname !== "/") {
+      window.location.href = `/${href}`;
+    } else {
+      const element = document.getElementById(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <footer className="flex flex-col bg-blue-extralight px-8 py-10 lg:px-20 lg:py-14">
@@ -43,12 +51,13 @@ export const Footer = () => {
         <ul className="flex flex-col space-y-4 my-8 lg:my-1">
           {navItems.map((item) => (
             <li key={item.label}>
-              <a
+              <Link
                 href={item.href}
                 className="text-sm font-semibold text-gray-neutral"
+                onClick={() => handleNavigation(item.href)}
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -63,18 +72,25 @@ export const Footer = () => {
             </Button>
           </div>
 
-          <div className="flex items-center space-x-4 mb-8">
-            <p className="text-sm font-semibold text-gray-neutral">INSTAGRAM</p>
-            <Image
-              src="./assets/instagram.svg"
-              alt="Instagram"
-              width={24}
-              height={24}
-            />
-            <span className="text-sm font-light text-gray-neutral">
-              @profivmedicinareprodutiva
-            </span>
-          </div>
+          <Link
+            href="https://www.instagram.com/profivmedicinareprodutiva/"
+            target="_blank"
+          >
+            <div className="flex items-center space-x-4 mb-8 cursor-pointer">
+              <p className="text-sm font-semibold text-gray-neutral">
+                INSTAGRAM
+              </p>
+              <Image
+                src="./assets/instagram.svg"
+                alt="Instagram"
+                width={24}
+                height={24}
+              />
+              <span className="text-sm font-light text-gray-neutral">
+                @profivmedicinareprodutiva
+              </span>
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -87,9 +103,14 @@ export const Footer = () => {
           <p className="text-sm font-semibold text-blue-dark">
             POLÍTICA DE PRIVACIDADE
           </p>
-          <p className="text-sm font-semibold text-blue-dark">
-            CANAL DE DENÚNCIAS
-          </p>
+          <Link
+            href="https://whistleblowersoftware.com/secure/eugingroup"
+            target="_blank"
+          >
+            <p className="text-sm font-semibold text-blue-dark">
+              CANAL DE DENÚNCIAS
+            </p>
+          </Link>
         </div>
       </div>
     </footer>
