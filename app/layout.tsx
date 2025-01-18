@@ -25,9 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={rubik.className}>
-      <body>
+      <body className="min-h-screen">
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

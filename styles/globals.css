@@ -71,6 +71,14 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.accordion-trigger > svg {
+  display: none;
+}
+
 .hero-swiper {
   --swiper-navigation-color: #717171;
   --swiper-navigation-size: 15px;

@@ -29,12 +29,14 @@ module.exports = {
         },
         dark: "#252525",
         gray: {
+          extralight: "#E3E4E6",
+          light: "#CDCDCD",
           default: "#A9A8A8",
           neutral: "#717171",
-          light: "#E3E4E6",
         },
         white: "#FFFFFF",
         light: "#F5F5F5",
+        ligthBg: "#F9F9F9",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
