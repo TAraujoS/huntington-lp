@@ -116,3 +116,66 @@ export const faqQuestions = [
       "A prematuridade está relacionada a gestações múltiplas. Portanto, uma gravidez única por meio de fertilização in vitro não tem risco aumentado de prematuridade. Já uma gestação múltipla, seja espontânea ou pós-fertilização, tem mais riscos.",
   },
 ];
+
+export const medicalTeam = [
+  {
+    name: "Eduardo Motta",
+    picture: "/assets/doctor-2.png",
+    register: "CREMESP 58.933",
+    rqe: "RQE/RA 436.811",
+    resume:
+      "Especialista em Reprodução Assistida e Corresponsável pelo Centro de Reprodução Humana Santa Joana",
+    video: "https://youtu.be/MuQ60KX_AlU",
+    lattes:
+      "Fundador da Huntington; Corresponsável pelo Centro de Reprodução Humana Santa Joana; Professor Adjunto do Departamento de Ginecologia da Escola Paulista de Medicina – Unifesp; Especialização em Reprodução Humana na Huntington Reproductive Center, Califórnia – EUA; Mestrado e Doutorado em Medicina pelo Departamento de Ginecologia – Escola Paulista de Medicina Unifesp; Especialização em Ginecologia e Obstetrícia pela FEBRASGO; Residência Médica em Ginecologia e Obstetrícia pela Escola Paulista de Medicina; Médico formado pela Faculdade de Ciências Médicas da Pontifícia Universidade Católica de Campinas..",
+  },
+  {
+    name: "Marcos Shiroma",
+    picture: "/assets/doctor-3.png",
+    register: "CRM 112.096",
+    rqe: "RQE 524.171",
+    resume: "Especialista em Reprodução Assistida",
+    insta: "https://www.instagram.com/drmarcosshiroma/",
+    lattes:
+      "Graduação pela Faculdade de Medicina da USP (FMUSP) Residência Médica em Ginecologia e Obstetrícia pela FMUSP Ex-Preceptor da Residência Médica e Internato em Ginecologia da FMUSP Especialização em Endoscopia Ginecológica na FMUSP Especialização em Reprodução Humana na FMUSP Doutor em Ciências pela USP",
+  },
+  {
+    name: "Guilherme Wood",
+    picture: "/assets/doctor-4.jpg",
+    register: "CRM-SP: 129.735",
+    rqe: "RQE: 55.654",
+    resume: "Médico Urologista",
+    video: "https://youtu.be/Jj0XvSKEnhM",
+    insta: "https://www.instagram.com/drguilhermewood/",
+    lattes:
+      "Fellowship em urologia e andrologia pelo Massachusetts General Hospital Harvard University – Boston-EUA; Titulo de especialista em urologia pela Sociedade Brasileira de Urologia (SBU); Residência médica em urologia pelo Hospital das Clínicas da Universidade de São Paulo (USP); Residência médica em cirurgia geral pelo Hospital das Clínicas da Universidade de São Paulo (USP); Médico formado pela Faculdade de Medicina da Universidade de São Paulo (USP).",
+  },
+  {
+    name: "Ana Luiza Nunes",
+    picture: "/assets/doctor-5.jpg",
+    register: "CRM-SP: 126.992",
+    rqe: "RQE 122.185",
+    resume: "Especialista em Reprodução Assistida",
+    insta: "https://www.instagram.com/draanaluizanunes/",
+    lattes:
+      "Médica responsável pelo aconselhamento genético do Grupo Huntington; Fellow na Vrije Universiteit Brussel na Bélgica; Fellow em Reprodução Humana pela Escola Paulista de Medicina (UNIFESP/ EPM). Especialização em Reprodução Humana pelaFaculdade de Medicina do ABC; Título de Especialista em Ginecologia e Obstetrícia pela Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO); Residência Médica em Ginecologia e Obstetrícia pela Faculdade de Medicina do ABC; Médica formada pela Faculdade de Medicina do ABC.",
+  },
+  {
+    name: "Manuela Marquez Amaral",
+    picture: "/assets/doctor-6.jpeg",
+    register: "COREN: 258.828",
+    rqe: "",
+    resume: "Gerente de Enfermagem",
+    lattes:
+      "Graduada pela Universidade Federal de Santa Catarina; Pós-Graduada em Terapia Intensiva pela Universidade do Sul de Santa Catarina; Pós-Graduada em Auditoria de Serviços em Saúde pelo Albert Einstein Instituto Israelita de Ensino e Pesquisa.",
+  },
+  {
+    name: "Karina Martins Maruo Moreira",
+    picture: "/assets/doctor-7.png",
+    register: "",
+    rqe: "",
+    resume: "Coordenadora de embriologia",
+    lattes:
+      "Formada na Universidade Metodista de São Paulo. Coordenadora do laboratório de embriologia do Centro de Reprodução Humana Santa Joana.",
+  },
+];

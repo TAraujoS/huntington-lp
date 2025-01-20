@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Link from "next/link";
 
 export const MiddleSection = () => {
   const femaleFactors = [
@@ -200,20 +201,24 @@ export const MiddleSection = () => {
       </div>
 
       <div className="w-full mt-2">
-        <Image
-          src="/assets/middle-banner-mobile.svg"
-          alt="Banner"
-          width={300}
-          height={200}
-          className="w-full md:hidden"
-        />
-        <Image
-          src="/assets/middle-banner.svg"
-          alt="Banner"
-          width={800}
-          height={600}
-          className="w-full hidden md:block"
-        />
+        <Link href="/duvidas-frequentes">
+          <Image
+            src="/assets/middle-banner-mobile.svg"
+            alt="Banner"
+            width={300}
+            height={200}
+            className="w-full md:hidden"
+          />
+        </Link>
+        <Link href="/duvidas-frequentes">
+          <Image
+            src="/assets/middle-banner.svg"
+            alt="Banner"
+            width={800}
+            height={600}
+            className="w-full hidden md:block"
+          />
+        </Link>
       </div>
     </section>
   );
