@@ -31,7 +31,6 @@ export const navItems = [
 
 export const proceduresContent = [
   {
-    id: 1,
     title: "FERTILIZAÇÃO IN VITRO (FIV)",
     icon: "/assets/procedure-icon-1.svg",
     content:
@@ -40,7 +39,6 @@ export const proceduresContent = [
     border: "border-magenta-text",
   },
   {
-    id: 2,
     title: "CONGELAMENTO DE ÓVULOS",
     icon: "/assets/procedure-icon-2.svg",
     content:
@@ -49,7 +47,6 @@ export const proceduresContent = [
     border: "border-orange-text",
   },
   {
-    id: 3,
     title: "INSEMINAÇÃO INTRAUTERINA",
     icon: "/assets/procedure-icon-3.svg",
     content:
@@ -58,7 +55,6 @@ export const proceduresContent = [
     border: "border-green-text",
   },
   {
-    id: 4,
     title: "ONCOFERTILIDADE",
     icon: "/assets/procedure-icon-4.svg",
     content:
@@ -67,7 +63,6 @@ export const proceduresContent = [
     border: "border-blue-default",
   },
   {
-    id: 5,
     title: "OVODOAÇÃO",
     icon: "/assets/procedure-icon-5.svg",
     content:
@@ -164,7 +159,6 @@ export const medicalTeam = [
     name: "Manuela Marquez Amaral",
     picture: "/assets/doctor-6.jpeg",
     register: "COREN: 258.828",
-    rqe: "",
     resume: "Gerente de Enfermagem",
     lattes:
       "Graduada pela Universidade Federal de Santa Catarina; Pós-Graduada em Terapia Intensiva pela Universidade do Sul de Santa Catarina; Pós-Graduada em Auditoria de Serviços em Saúde pelo Albert Einstein Instituto Israelita de Ensino e Pesquisa.",
@@ -172,8 +166,6 @@ export const medicalTeam = [
   {
     name: "Karina Martins Maruo Moreira",
     picture: "/assets/doctor-7.png",
-    register: "",
-    rqe: "",
     resume: "Coordenadora de embriologia",
     lattes:
       "Formada na Universidade Metodista de São Paulo. Coordenadora do laboratório de embriologia do Centro de Reprodução Humana Santa Joana.",

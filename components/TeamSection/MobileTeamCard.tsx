@@ -70,7 +70,7 @@ export const MobileTeamCard = () => {
                 INSTAGRAM
               </Link>
             </div>
-            <CollapsibleContent className="text-xs font-normal text-gray-neutral mt-2 list-inside">
+            <CollapsibleContent className="text-xs font-normal text-gray-neutral mt-2 leading-5">
               Revisora da revista científica Human Reproduction Archives (SBRH);
               Editora associada da revista internacional Minerva Ginecológic;
               Professora convidada UNIFESP para graduação desde 2010; Doutora em
@@ -116,7 +116,8 @@ export const MobileTeamCard = () => {
                 </h5>
 
                 <p className="text-xs text-gray-neutral font-normal">
-                  {doctor.register} - {doctor.rqe}
+                  {doctor.register && doctor.register}
+                  {doctor.rqe && " | " + doctor.rqe}
                 </p>
 
                 <span className="text-sm text-gray-neutral font-normal">
@@ -154,7 +155,7 @@ export const MobileTeamCard = () => {
                         </Link>
                       )}
                     </div>
-                    <CollapsibleContent className="text-xs font-normal text-gray-neutral mt-2 list-inside">
+                    <CollapsibleContent className="text-xs font-normal text-gray-neutral mt-3 leading-5">
                       {doctor.lattes}
                     </CollapsibleContent>
                   </Collapsible>

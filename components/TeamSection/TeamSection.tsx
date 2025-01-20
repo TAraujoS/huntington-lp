@@ -1,6 +1,6 @@
 "use client";
 
-import { DesktopTeamCard } from "./DesktopMobileCard";
+import { DesktopTeamCard } from "./DesktopTeamCard";
 import { MobileTeamCard } from "./MobileTeamCard";
 
 export const TeamSection = () => {

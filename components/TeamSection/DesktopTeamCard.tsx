@@ -93,7 +93,7 @@ export const DesktopTeamCard = () => {
 
                 <div className="mt-2">
                   <div className="border-b border-gray-200 mb-4" />
-                  <p className="text-xs text-gray-neutral font-normal leading-4">
+                  <p className="text-xs text-gray-neutral font-normal leading-5">
                     Revisora da revista científica Human Reproduction Archives
                     (SBRH); Editora associada da revista internacional Minerva
                     Ginecológic; Professora convidada UNIFESP para graduação
@@ -151,10 +151,11 @@ export const DesktopTeamCard = () => {
             </h5>
 
             <p className="text-xs text-gray-neutral font-normal">
-              {doctor.register} - {doctor.rqe}
+              {doctor.register && doctor.register}
+              {doctor.rqe && " | " + doctor.rqe}
             </p>
 
-            <span className="text-sm text-gray-neutral font-normal">
+            <span className="text-sm text-gray-neutral font-normal h-[12%]">
               {doctor.resume}
             </span>
 
@@ -188,7 +189,8 @@ export const DesktopTeamCard = () => {
                   </h5>
 
                   <p className="text-xs text-gray-neutral font-normal">
-                    {doctor.register} - {doctor.rqe}
+                    {doctor.register && doctor.register}
+                    {doctor.rqe && " | " + doctor.rqe}
                   </p>
 
                   <span className="text-sm text-gray-neutral font-normal">
@@ -222,7 +224,7 @@ export const DesktopTeamCard = () => {
 
                   <div className="mt-2">
                     <div className="border-b border-gray-200 mb-4" />
-                    <p className="text-xs text-gray-neutral font-normal leading-4">
+                    <p className="text-xs text-gray-neutral font-normal leading-5">
                       {doctor.lattes}
                     </p>
                   </div>
