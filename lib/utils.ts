@@ -6,9 +6,26 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const navItems = [
-  { label: "QUEM SOMOS", href: "#quem-somos" },
+  {
+    label: "QUEM SOMOS",
+    href: "#quem-somos",
+    dropdown: [
+      { label: "SOBRE NÓS", href: "#quem-somos" },
+      { label: "INFRAESTRUTURA", href: "#infraestrutura" },
+    ],
+  },
   { label: "INFERTILIDADE", href: "#infertilidade" },
-  { label: "PROCEDIMENTOS", href: "#procedimentos" },
+  {
+    label: "PROCEDIMENTOS",
+    href: "#procedimentos",
+    dropdown: [
+      { label: "FERTILIZAÇÃO IN VITRO", href: "#procedimentos" },
+      { label: "CONGELAMENTO DE ÓVULOS", href: "#procedimentos" },
+      { label: "INSEMINAÇÃO INTRAUTRINA", href: "#procedimentos" },
+      { label: "ONCOFERTILIDADE", href: "#procedimentos" },
+      { label: "OVODOAÇÃO", href: "#procedimentos" },
+    ],
+  },
   { label: "EQUIPE", href: "#equipe" },
 ];
 
