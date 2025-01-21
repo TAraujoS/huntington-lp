@@ -9,7 +9,7 @@ import { PopoverClose } from "@radix-ui/react-popover";
 export const DesktopTeamCard = () => {
   return (
     <div className="flex flex-col w-full items-center">
-      <div className="flex w-full max-w-5xl h-64 border border-gray-default p-6 text-start rounded-sm mb-5 px-16 gap-10">
+      <div className="flex w-full max-w-5xl h-64 border border-gray-default py-6 text-start rounded-sm mb-5 px-16 gap-10">
         <div className="relative w-1/3 h-full overflow-hidden">
           <Image
             src="/assets/doctor-1.jpg"
