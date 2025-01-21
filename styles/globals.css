@@ -102,3 +102,109 @@ html {
     --swiper-pagination-top: 100px;
   }
 }
+
+#rd-section-m5zotmde {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  width: 100% !important; 
+}
+
+#rd-row-m5zotmdj {
+  width: 100% !important;
+}
+
+@media (max-width: 320px) {
+  #bricks-component--dllWqWP5IjtasBxmpueog {
+    max-width: 280px !important;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+  #bricks-component--dllWqWP5IjtasBxmpueog {
+    max-width: 310px !important;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  #bricks-component--dllWqWP5IjtasBxmpueog {
+    max-width: 370px !important;
+  }
+}
+
+@media (min-width: 426px) {
+  #bricks-component--dllWqWP5IjtasBxmpueog {
+    max-width: 500px !important;
+  }
+}
+
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d label {
+  color: #717171 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Rubik', sans-serif !important;
+}
+
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="name"],
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="cf_sobrenome"],
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="email"],
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="cf_sobrenome"],
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="cf_cpf_somente_numeros"],
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="cf_sobrenome"],
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="cf_cep"],
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="mobile_phone"]{
+  border: 1px solid #d1d5db !important;
+  height: 50px !important;
+  font-family: 'Rubik', sans-serif !important;
+  padding: 15px !important;
+  font-size: 14px !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input:focus,
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d textarea:focus {
+  outline: none !important;
+  border-color: #d1d5db !important;
+  box-shadow: none !important; 
+}
+
+#pf-solicitar-ligacao-4fb02f01d08a1d2c529d input[name="cf_escreva_aqui_sua_mensagem"] {
+  height: 150px !important;
+  border: 1px solid #d1d5db !important;
+  font-family: 'Rubik', sans-serif !important;
+  padding: 15px !important;
+  font-size: 14px !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+}
+
+::placeholder {
+  color: #9EACB1 !important;
+  font-size: 14px !important;
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.phone-input-group .select2-container {
+  display: none !important;
+}
+
+#rd-button-m5zotmdq {
+  background-color: #00b0d8 !important; 
+  color: #ffffff !important;
+  font-weight: 600 !important; 
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.375rem !important; 
+  transition: background-color 0.3s ease !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: 'Rubik', sans-serif !important;
+}
+
+#rd-button-m5zotmdq:hover {
+  background-color: #005CA1 !important;
+}

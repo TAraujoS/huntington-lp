@@ -29,7 +29,81 @@ export const ScheduleSection = () => {
       }
     };
 
-    initializeForm();
+    const loadRDStationScript = () => {
+      const scriptExists = document.querySelector(
+        'script[src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"]'
+      );
+
+      if (!scriptExists) {
+        const script = document.createElement("script");
+        script.src =
+          "https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js";
+        script.async = true;
+        script.onload = initializeForm;
+        document.body.appendChild(script);
+      } else {
+        initializeForm();
+      }
+    };
+
+    const customizeForm = () => {
+      const observer = new MutationObserver(() => {
+        const button = document.querySelector(
+          "#rd-button-m5zotmdq"
+        ) as HTMLButtonElement;
+        if (button) {
+          button.textContent = "ENVIAR MEUS DADOS";
+        }
+
+        const placeholders = [
+          {
+            selector: "#rd-text_field-m5zqm3mj",
+            placeholder: "Digite seu nome",
+          },
+          {
+            selector: "#rd-text_field-m5zqm3mk",
+            placeholder: "Digite seu sobrenome",
+          },
+          {
+            selector: "#rd-email_field-m5zqm3ml",
+            placeholder: "Digite seu e-mail",
+          },
+          {
+            selector: "#rd-text_field-m5zqm3mm",
+            placeholder: "000.000.000-00",
+          },
+          {
+            selector: "#rd-number_field-m5zqm3mo",
+            placeholder: "Preencha seu CEP",
+          },
+          {
+            selector: "#rd-phone_field-m5zqm3mn",
+            placeholder: "Digite seu celular",
+          },
+        ];
+
+        placeholders.forEach(({ selector, placeholder }) => {
+          const input = document.querySelector<HTMLInputElement>(selector);
+          if (input) {
+            input.placeholder = placeholder;
+          }
+        });
+      });
+
+      const formElement = document.getElementById(
+        "pf-solicitar-ligacao-4fb02f01d08a1d2c529d"
+      );
+
+      if (formElement) {
+        observer.observe(formElement, {
+          childList: true,
+          subtree: true,
+        });
+      }
+    };
+
+    loadRDStationScript();
+    customizeForm();
   }, []);
 
   return (

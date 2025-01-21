@@ -42,7 +42,7 @@ export const Footer = () => {
             <p className="text-sm font-light text-gray-neutral">
               (11) 5573-3015
             </p>
-            <p className="text-sm font-light text-gray-neutral">
+            <p className="text-xs sm:text-sm font-light text-gray-neutral">
               centralderelacionamento@huntington.com.br
             </p>
           </div>
@@ -77,7 +77,7 @@ export const Footer = () => {
             target="_blank"
           >
             <div className="flex items-center space-x-4 mb-8 cursor-pointer">
-              <p className="text-sm font-semibold text-gray-neutral">
+              <p className="text-xs sm:text-sm font-semibold text-gray-neutral">
                 INSTAGRAM
               </p>
               <Image
@@ -86,7 +86,7 @@ export const Footer = () => {
                 width={24}
                 height={24}
               />
-              <span className="text-sm font-light text-gray-neutral">
+              <span className="text-xs sm:text-sm font-light text-gray-neutral">
                 @profivmedicinareprodutiva
               </span>
             </div>
