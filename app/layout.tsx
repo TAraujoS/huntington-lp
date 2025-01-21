@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import "../styles/globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Script from "next/script";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -30,6 +31,12 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
       </body>
+      <Script
+        src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
+        strategy="lazyOnload"
+        type="text/javascript"
+        async
+      />
     </html>
   );
 }
