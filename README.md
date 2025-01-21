@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page - Clínica Huntington
 
-## Getting Started
+Esta é uma Landing Page desenvolvida para a Clínica Huntington, focada em responsividade, boas práticas de código e acessibilidade. O objetivo principal é fornecer informações claras sobre os serviços e facilitar o contato com a clínica por meio de formulários integrados.
 
-First, run the development server:
+## Tecnologias Utilizadas
+
+- **Next.js**: Framework para desenvolvimento web baseado em React.
+- **Tailwind CSS**: Framework utilitário para estilização.
+- **TypeScript**: Tipagem estática para JavaScript.
+- **Swiper.js**: Para carrosséis e sliders interativos.
+- **RD Station**: Integração com formulários externos.
+
+## Funcionalidades
+
+- **Formulário de contato integrado** com o RD Station, permitindo personalização de estilos e placeholders.
+- **Slider interativo** com suporte para diferentes breakpoints (telas mobile e desktop).
+- **Design Responsivo**: Adaptado para dispositivos móveis, tablets e desktops.
+- **SEO otimizado** para melhorar a visibilidade em mecanismos de busca.
+
+## Como Inicializar a Aplicação
+
+### Pré-requisitos
+
+- Node.js versão 18 ou superior.
+- Gerenciador de pacotes **npm** ou **yarn**.
+
+### Passo a Passo
+
+1. **Clone o repositório**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/seu-usuario/landing-page-huntington.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Navegue até a pasta do projeto**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd landing-page-huntington
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Instale as dependências se estiver usando npm ou yarn**
 
-## Learn More
+```bash
+  npm install ou yarn install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Inicie o servidor de desenvolvimento com npm ou yarn:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev ou yarn dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Acesse a aplicação:**
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+  http://localhost:3000
+```
