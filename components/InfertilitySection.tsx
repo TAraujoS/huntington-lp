@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Link from "next/link";
 
-export const MiddleSection = () => {
+export const InfertilitySection = () => {
   const femaleFactors = [
     "Idade Avançada",
     "Endometriose",

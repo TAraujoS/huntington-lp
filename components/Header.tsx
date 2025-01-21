@@ -74,6 +74,7 @@ export const Header = () => {
               <Link
                 key={item.label}
                 href={item.href}
+                onClick={() => handleNavigation(item.href)}
                 className="text-gray-neutral font-semibold text-xs hover:text-blue-default"
               >
                 {item.label}
