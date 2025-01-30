@@ -26,6 +26,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={rubik.className}>
+      <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1WVFMTV3FK"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-1WVFMTV3FK');
+            `}
+        </Script>
+      </head>
       <body className="min-h-screen">
         <Header />
         <main>{children}</main>
