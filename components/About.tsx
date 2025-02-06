@@ -15,7 +15,7 @@ export const About = () => {
   return (
     <section
       id="quem-somos"
-      className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 gap-4 max-w-7xl mx-auto bg-blue-normal bg-opacity-10 lg:bg-none"
+      className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 gap-4 max-w-7xl mx-auto bg-blue-normal bg-opacity-10 lg:bg-transparent"
     >
       <div className="hidden lg:block lg:w-1/2 xl:w-1/3 lg:pl-10">
         <Image
