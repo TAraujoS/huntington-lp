@@ -26,32 +26,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={rubik.className}>
-      <head>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-1WVFMTV3FK"
-        ></Script>
-        <Script id="google-analytics">
-          {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-1WVFMTV3FK');
-            `}
-        </Script>
-      </head>
-      <body className="min-h-screen">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <Script
+        type="text/javascript"
+        async
+        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/30c67d99-c436-4075-8903-a4298085cdf6-loader.js"
+      ></Script>
       <Script
         src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
         strategy="lazyOnload"
         type="text/javascript"
         async
       />
+      <body className="min-h-screen">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

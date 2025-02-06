@@ -82,25 +82,24 @@ html {
 .hero-swiper {
   --swiper-navigation-color: #717171;
   --swiper-navigation-size: 15px;
+  --swiper-pagination-color: #0FB2AB;
   --swiper-pagination-bullet-inactive-color: #ffffff;
   --swiper-pagination-bullet-inactive-opacity: 0.8;
 }
 
 .middle-swiper {
   --swiper-navigation-color: #717171;
-  --swiper-navigation-size: 15px;
-  --swiper-navigation-top-offset: 30%;
-  --swiper-navigation-sides-offset: 0px;
+  --swiper-pagination-color: #0FB2AB;
   --swiper-pagination-bullet-inactive-color: #A9A8A8;
   --swiper-pagination-bullet-inactive-opacity: 0.8;
-  --swiper-pagination-top: 90px;
+  --swiper-pagination-top: 100px;
 }
 
-@media (min-width: 768px) {
-  .middle-swiper {
-    --swiper-navigation-top-offset: 35%;
-    --swiper-pagination-top: 100px;
-  }
+.procedure-swiper {
+  --swiper-navigation-color: #717171;
+  --swiper-navigation-size: 25px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 5px;
 }
 
 #rd-section-m5zotmde {
@@ -114,7 +113,20 @@ html {
 }
 
 #rd-row-m5zotmdj {
-  width: 100% !important;
+  min-width: 100% !important;
+}
+
+@media (width >= 1024px) {
+  .custom-rd-form {
+    min-width: 100% !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (width >= 1024px) {
+  #bricks-component--dllWqWP5IjtasBxmpueog {
+    min-width: 100% !important;
+  }
 }
 
 @media (max-width: 320px) {
@@ -139,6 +151,10 @@ html {
   #bricks-component--dllWqWP5IjtasBxmpueog {
     max-width: 500px !important;
   }
+}
+
+#rd-form-m5zotmdl {
+  min-width: 100%;
 }
 
 #pf-solicitar-ligacao-4fb02f01d08a1d2c529d label {
@@ -194,17 +210,16 @@ html {
 }
 
 #rd-button-m5zotmdq {
-  background-color: #00b0d8 !important; 
+  background-color: #0FB2AB!important; 
   color: #ffffff !important;
   font-weight: 600 !important; 
   padding: 0.5rem 1rem !important;
   border-radius: 0.375rem !important; 
   transition: background-color 0.3s ease !important;
   font-size: 14px !important;
-  font-weight: 400 !important;
   font-family: 'Rubik', sans-serif !important;
 }
 
 #rd-button-m5zotmdq:hover {
-  background-color: #005CA1 !important;
+  background-color: #0FB2AB !important;
 }
