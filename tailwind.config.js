@@ -12,9 +12,11 @@ module.exports = {
         blue: {
           extralight: "#EEFCFF",
           light: "#DCF5FB",
+          normal: "#0FB2AB",
           default: "#00B0D8",
           dark: "#005CA1",
         },
+        purple: "#6A68CE",
         magenta: {
           text: "#EB526E",
           background: "#FFF6F6",
@@ -32,7 +34,8 @@ module.exports = {
           extralight: "#E3E4E6",
           light: "#CDCDCD",
           default: "#A9A8A8",
-          neutral: "#717171",
+          neutral: "#707070",
+          title: "#717171",
         },
         white: "#FFFFFF",
         light: "#F5F5F5",
@@ -80,6 +83,9 @@ module.exports = {
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
+      },
+      fontSize: {
+        xxs: "0.6rem",
       },
       borderRadius: {
         lg: "var(--radius)",
