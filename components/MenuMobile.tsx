@@ -78,7 +78,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
       <div className="flex flex-col py-8 px-4">
         <Accordion type="single" collapsible>
           <AccordionItem value="quem-somos">
-            <AccordionTrigger className="text-gray-neutral font-bold text-xs hover:no-underline focus:ring-0 focus:outline-none data-[state=open]:text-blue-default">
+            <AccordionTrigger className="text-gray-neutral font-bold text-xs hover:no-underline focus:ring-0 focus:outline-none data-[state=open]:text-blue-normal">
               QUEM SOMOS
             </AccordionTrigger>
             <AccordionContent>
@@ -121,7 +121,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
 
         <Accordion type="single" collapsible className="-pt-4">
           <AccordionItem value="procedimentos">
-            <AccordionTrigger className="text-gray-neutral font-bold text-xs hover:no-underline focus:ring-0 focus:outline-none data-[state=open]:text-blue-default">
+            <AccordionTrigger className="text-gray-neutral font-bold text-xs hover:no-underline focus:ring-0 focus:outline-none data-[state=open]:text-blue-normal">
               PROCEDIMENTOS
             </AccordionTrigger>
             <AccordionContent>
@@ -155,10 +155,10 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
           </Link>
         </div>
 
-        <div className="pt-2">
+        <div className="pt-4 mt-2">
           <Button
             variant="default"
-            className="w-28 bg-blue-default text-white font-black text-sm hover:bg-blue-dark"
+            className="w-28 bg-blue-normal text-white font-black text-xs hover:bg-blue-dark"
           >
             <Link href="/agendar">AGENDAR </Link>
           </Button>

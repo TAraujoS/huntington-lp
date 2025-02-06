@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { cn, faqQuestions } from "@/lib/utils";
 import {
   Accordion,
@@ -7,7 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-import { useState } from "react";
 
 export const FaqSection = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
@@ -39,7 +39,7 @@ export const FaqSection = () => {
                     <AccordionTrigger className="accordion-trigger flex items-center justify-between p-4 w-full text-gray-neutral font-normal text-xs hover:no-underline focus:ring-0 focus:outline-none">
                       <span
                         className={cn(
-                          isOpen && "text-blue-default font-semibold"
+                          isOpen && "text-blue-normal font-semibold"
                         )}
                       >
                         {item.question}
@@ -89,7 +89,7 @@ export const FaqSection = () => {
                     <AccordionTrigger className="accordion-trigger flex items-center justify-between p-4 w-full text-gray-neutral font-normal text-xs hover:no-underline focus:ring-0 focus:outline-none">
                       <span
                         className={cn(
-                          isOpen && "text-blue-default font-semibold"
+                          isOpen && "text-blue-normal font-semibold"
                         )}
                       >
                         {item.question}

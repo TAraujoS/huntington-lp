@@ -1,15 +1,20 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Swiper as SwiperCore } from "swiper";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const InfertilitySection = () => {
+  const swiperRef = useRef<SwiperCore | null>(null);
   const femaleFactors = [
     "Idade Avançada",
     "Endometriose",
@@ -29,9 +34,9 @@ export const InfertilitySection = () => {
   return (
     <section
       id="infertilidade"
-      className="flex flex-col items-center justify-center p-10 md:px-20 py-8 gap-4 max-w-7xl mx-auto"
+      className="flex flex-col items-center justify-center p-8 md:px-20 py-8 gap-4 max-w-7xl mx-auto"
     >
-      <h2 className="text-blue-default text-lg font-semibold my-2">
+      <h2 className="text-blue-normal text-2xl font-semibold my-2">
         INFERTILIDADE
       </h2>
 
@@ -77,9 +82,9 @@ export const InfertilitySection = () => {
               como idade, endometriose, menopausa precoce, entre outros.
             </p>
           </div>
-          <div className="flex bg-blue-extralight text-blue-default items-center p-6 gap-5 h-24">
+          <div className="flex bg-blue-normal bg-opacity-10 text-blue-normal items-center p-6 gap-5 h-24">
             <Image
-              src="/assets/man-icon.svg"
+              src="/assets/men-icon.svg"
               alt="Icone"
               width={20}
               height={20}
@@ -89,7 +94,7 @@ export const InfertilitySection = () => {
               das causas estão nos homem, como varicocele e azoospermia.
             </p>
           </div>
-          <div className="flex bg-orange-background text-orange-text items-center p-6 gap-5 h-24">
+          <div className="flex bg-purple bg-opacity-10 text-purple items-center p-6 gap-5 h-24">
             <Image
               src="/assets/couple-icon.svg"
               alt="Icone"
@@ -104,18 +109,31 @@ export const InfertilitySection = () => {
         </div>
       </div>
 
-      <div className="w-full lg:hidden">
+      <div className="w-full lg:hidden relative">
+        <button
+          className="absolute -left-8 top-1/3 transform -translate-y-1/2 text-gray-neutral p-2 rounded-full z-10 lg:hidden"
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <ChevronLeft />
+        </button>
+        <button
+          className="absolute -right-8 top-1/3 transform -translate-y-1/2 text-gray-neutral p-2 rounded-full z-10 lg:hidden"
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <ChevronRight />
+        </button>
+
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
-          navigation
           slidesPerView={1}
           loop={true}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           className="middle-swiper"
         >
           <SwiperSlide>
-            <div className="flex w-11/12 bg-magenta-background text-magenta-text items-center p-4 gap-2 mx-auto mb-10 md:p-6 md:gap-4">
+            <div className="flex w-full bg-magenta-background text-magenta-text items-center p-4 gap-2 mb-10 md:p-6 md:gap-4">
               <Image
                 src="/assets/woman-icon.svg"
                 alt="Icone"
@@ -130,9 +148,9 @@ export const InfertilitySection = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex w-11/12 bg-blue-extralight text-blue-default items-center p-4 gap-2 mx-auto mt-2 md:p-6 md:gap-4">
+            <div className="flex w-full bg-blue-normal bg-opacity-10 text-blue-normal items-center p-4 gap-2 mt-2 md:p-6 md:gap-4">
               <Image
-                src="/assets/man-icon.svg"
+                src="/assets/men-icon.svg"
                 alt="Icone"
                 width={16}
                 height={16}
@@ -144,7 +162,7 @@ export const InfertilitySection = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex w-11/12 bg-orange-background text-orange-text items-center p-4 gap-2 mx-auto mt-2 md:p-6 md:gap-4">
+            <div className="flex w-full bg-purple bg-opacity-10 text-purple items-center p-4 gap-2 mt-2 md:p-6 md:gap-4">
               <Image
                 src="/assets/couple-icon.svg"
                 alt="Icone"
@@ -181,7 +199,7 @@ export const InfertilitySection = () => {
           </div>
         </div>
         <div className="space-y-3 lg:w-1/2">
-          <h4 className="text-blue-default font-semibold text-sm">
+          <h4 className="text-blue-normal font-semibold text-sm">
             FATORES MASCULINOS
           </h4>
           <p className="text-xs font-normal text-gray-neutral">
@@ -200,25 +218,46 @@ export const InfertilitySection = () => {
         </div>
       </div>
 
-      <div className="w-full mt-2">
-        <Link href="/duvidas-frequentes">
-          <Image
-            src="/assets/middle-banner-mobile.svg"
-            alt="Banner"
-            width={300}
-            height={200}
-            className="w-full md:hidden"
-          />
-        </Link>
-        <Link href="/duvidas-frequentes">
+      <div className="w-full mt-2 relative">
+        <div className="lg:hidden flex min-w-64 h-[86px] p-4 bg-blue-normal border-[1px] rounded-[3px] mx-auto my-6 items-center gap-2">
+          <p className="font-normal text-sm text-white">
+            Para saber mais, acesse as dúvidas frequentes
+          </p>
+          <Link href="/duvidas-frequentes">
+            <Button
+              variant="default"
+              className="font-black text-sm bg-white text-blue-normal p-2 hover:bg-blue-dark hover:text-white "
+            >
+              SABER MAIS
+            </Button>
+          </Link>
+        </div>
+
+        <div className="w-full hidden lg:block relative my-6">
           <Image
             src="/assets/middle-banner.svg"
             alt="Banner"
             width={800}
             height={600}
-            className="w-full hidden md:block"
+            className="w-full"
           />
-        </Link>
+
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Link href="/duvidas-frequentes">
+              <div className="flex w-[390px] h-[86px] p-6 border-[1px] border-gray-light rounded-[3px] hover:bg-blue-normal group">
+                <p className="text-gray-neutral font-normal text-sm group-hover:text-white">
+                  Para saber mais, acesse as dúvidas frequentes
+                </p>
+                <Button
+                  variant="default"
+                  className="bg-blue-normal text-white font-black text-sm group-hover:bg-white group-hover:text-blue-normal p-5 mb-6"
+                >
+                  SABER MAIS
+                </Button>
+              </div>
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

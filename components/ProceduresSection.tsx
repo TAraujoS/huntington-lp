@@ -18,8 +18,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const borderClasses: Record<string, string> = {
   "border-magenta-text": "border-magenta-text",
   "border-orange-text": "border-orange-text",
-  "border-green-text": "border-green-text",
-  "border-blue-default": "border-blue-default",
+  "border-purple": "border-purple",
+  "border-blue-normal": "border-blue-normal",
 };
 
 export const ProceduresSection = () => {
@@ -43,7 +43,7 @@ export const ProceduresSection = () => {
       id="procedimentos"
       className="bg-light pt-10 pb-8 flex flex-col items-center"
     >
-      <h2 className="text-blue-default text-lg font-semibold">PROCEDIMENTOS</h2>
+      <h2 className="text-blue-normal text-lg font-semibold">PROCEDIMENTOS</h2>
 
       <div className="relative flex mt-6 w-full px-8 max-w-7xl">
         <button
@@ -147,15 +147,16 @@ export const ProceduresSection = () => {
             setActiveSlide(swiper.realIndex);
           }
         }}
+        navigation
         onSwiper={(swiper) => (contentSwiperRef.current = swiper)}
         slidesPerView={1}
         loop={true}
-        className="w-full max-w-7xl"
+        className="procedure-swiper w-full max-w-7xl relative"
       >
         {proceduresContent.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="w-full flex flex-col lg:flex-row lg:gap-8 mt-10 gap-4 px-10 lg:px-10 md:p-6 max-w-7xl">
-              <div className="h-36 lg:h-full w-full md:h-52 lg:w-1/2 lg:order-2 lg:flex self-center">
+              <div className="h-36 lg:h-full w-full md:h-52 lg:w-1/2 lg:order-2 lg:flex self-center relative">
                 <Image
                   src={proceduresContent[activeSlide].image}
                   alt={`Imagem ${proceduresContent[activeSlide].title}`}
@@ -163,10 +164,28 @@ export const ProceduresSection = () => {
                   height={500}
                   className="w-full h-full object-cover"
                 />
+
+                <div className="hidden absolute lg:flex w-full justify-center z-20 bottom-4 space-x-2 mx-auto">
+                  {proceduresContent.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full ${
+                        activeSlide === index
+                          ? "bg-blue-default"
+                          : "bg-gray-light hover:bg-gray-default"
+                      }`}
+                      // onClick={() => {
+                      //   setActiveSlide(index);
+                      //   swiperRef.current?.slideToLoop(index, 0);
+                      // }}
+                      aria-label={`Slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
 
               <div className="lg:w-1/2">
-                <h4 className="text-gray-neutral font-semibold text-sm">
+                <h4 className="text-gray-neutral font-semibold text-sm lg:text-base">
                   {slide.title}
                 </h4>
 
@@ -174,7 +193,11 @@ export const ProceduresSection = () => {
                   {slide.content}
                 </p>
 
-                <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+                <Collapsible
+                  open={isOpen}
+                  onOpenChange={setIsOpen}
+                  className="block md:hidden"
+                >
                   <div>
                     <p className="text-xs font-normal text-gray-neutral leading-5 block md:hidden">
                       {isOpen
@@ -197,31 +220,13 @@ export const ProceduresSection = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex justify-center lg:justify-start mt-4 lg:mt-10">
+      <div className="flex justify-center lg:justify-start mt-4">
         <Button
           variant="default"
-          className="bg-blue-default text-white font-black text-sm hover:bg-blue-dark p-5 w-48"
+          className="bg-blue-normal text-white font-black text-sm hover:bg-blue-dark p-5 w-48"
         >
           <Link href="/agendar">AGENDAR CONSULTA</Link>
         </Button>
-      </div>
-
-      <div className="hidden lg:flex w-full justify-center z-20 mt-10 pb-2 space-x-2 mx-auto">
-        {proceduresContent.map((_, index) => (
-          <button
-            key={index}
-            className={`w-2 h-2 rounded-full ${
-              activeSlide === index
-                ? "bg-blue-default"
-                : "bg-gray-light hover:bg-gray-default"
-            }`}
-            onClick={() => {
-              setActiveSlide(index);
-              swiperRef.current?.slideToLoop(index, 0);
-            }}
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
       </div>
     </section>
   );
