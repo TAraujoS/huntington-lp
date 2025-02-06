@@ -30,7 +30,7 @@ export const Footer = () => {
             <h6 className="text-sm font-semibold text-gray-neutral">
               ENDEREÇO
             </h6>
-            <p className="text-sm font-light text-gray-neutral">
+            <p className="text-sm font-normal text-gray-neutral">
               Rua Eduardo Amaro, 152 - 8º andar, Paraíso, São Paulo/SP
             </p>
           </div>
@@ -39,10 +39,10 @@ export const Footer = () => {
             <h6 className="text-sm font-semibold text-gray-neutral">
               ENTRE EM CONTATO
             </h6>
-            <p className="text-sm font-light text-gray-neutral">
+            <p className="text-sm font-normal text-gray-neutral">
               (11) 5573-3015
             </p>
-            <p className="text-xs sm:text-sm font-light text-gray-neutral">
+            <p className="text-xs sm:text-sm font-normal text-gray-neutral">
               centralderelacionamento@huntington.com.br
             </p>
           </div>
@@ -66,48 +66,48 @@ export const Footer = () => {
           <div>
             <Button
               variant="default"
-              className="bg-blue-default text-white font-black text-sm hover:bg-blue-dark p-5 mb-6"
+              className="bg-blue-normal text-white font-black text-sm hover:bg-blue-dark p-5 mb-6"
             >
               <Link href="/agendar">AGENDAR CONSULTA</Link>
             </Button>
           </div>
 
-          <Link
-            href="https://www.instagram.com/profivmedicinareprodutiva/"
-            target="_blank"
-          >
-            <div className="flex items-center space-x-4 mb-8 cursor-pointer">
-              <p className="text-xs sm:text-sm font-semibold text-gray-neutral">
-                INSTAGRAM
-              </p>
-              <Image
-                src="./assets/instagram.svg"
-                alt="Instagram"
-                width={24}
-                height={24}
-              />
-              <span className="text-xs sm:text-sm font-light text-gray-neutral">
-                @profivmedicinareprodutiva
-              </span>
-            </div>
-          </Link>
+          <div className="flex lg:flex-col items-center lg:items-start gap-3 mb-8 cursor-pointer">
+            <p className="text-sm font-semibold text-gray-neutral">INSTAGRAM</p>
+            <Link
+              href="https://www.instagram.com/profivmedicinareprodutiva/"
+              target="_blank"
+            >
+              <div className="flex gap-3">
+                <Image
+                  src="./assets/instagram.svg"
+                  alt="Instagram"
+                  width={24}
+                  height={24}
+                />
+                <span className="text-sm font-normal text-gray-neutral">
+                  @profivmedicinareprodutiva
+                </span>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className="flex flex-col bg-blue-light px-6 py-12 lg:flex-row lg:py-5 lg:items-center lg:justify-between">
-        <p className="text-sm font-semibold text-blue-default w-full lg:w-2/3 mr-5">
+      <div className="flex flex-col bg-white px-6 py-12 lg:flex-row lg:py-5 lg:items-center lg:justify-between">
+        <p className="text-sm font-semibold text-blue-normal w-full lg:w-2/3 mr-5">
           Responsável Técnico: Dr. Eduardo Leme Alves da Motta — CRM-SP 58.933 —
           RQE 43681
         </p>
         <div className="mt-6 flex flex-col lg:flex-row justify-between lg:mt-0 lg:w-1/3 gap-4">
-          <p className="text-sm font-semibold text-blue-dark">
+          <p className="text-sm font-semibold text-blue-normal">
             POLÍTICA DE PRIVACIDADE
           </p>
           <Link
             href="https://whistleblowersoftware.com/secure/eugingroup"
             target="_blank"
           >
-            <p className="text-sm font-semibold text-blue-dark">
+            <p className="text-sm font-semibold text-blue-normal">
               CANAL DE DENÚNCIAS
             </p>
           </Link>

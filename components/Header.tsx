@@ -54,7 +54,7 @@ export const Header = () => {
           {navItems.map((item) =>
             item.dropdown ? (
               <HoverCard key={item.label}>
-                <HoverCardTrigger className="text-gray-neutral font-semibold text-xs hover:text-blue-default cursor-pointer">
+                <HoverCardTrigger className="text-gray-neutral font-semibold text-xs hover:text-blue-normal cursor-pointer">
                   {item.label}
                 </HoverCardTrigger>
                 <HoverCardContent className="bg-white border border-gray-200 shadow-lg rounded-md p-2 w-auto">
@@ -63,7 +63,7 @@ export const Header = () => {
                       key={index}
                       onClick={() => handleNavigation(subItem.href)}
                       href={subItem.href}
-                      className="text-gray-neutral font-normal text-xs hover:text-blue-default focus:text-blue-default focus:bg-white block px-4 py-2 rounded"
+                      className="text-gray-neutral font-normal text-xs hover:text-blue-normal focus:text-blue-normal focus:bg-white block px-4 py-2 rounded"
                     >
                       {subItem.label}
                     </Link>
@@ -75,7 +75,7 @@ export const Header = () => {
                 key={item.label}
                 href={item.href}
                 onClick={() => handleNavigation(item.href)}
-                className="text-gray-neutral font-semibold text-xs hover:text-blue-default"
+                className="text-gray-neutral font-semibold text-xs hover:text-blue-normal"
               >
                 {item.label}
               </Link>
@@ -86,7 +86,7 @@ export const Header = () => {
         <div>
           <Button
             variant="default"
-            className="bg-blue-default text-white font-black text-xs hover:bg-blue-dark"
+            className="bg-blue-normal text-white font-black text-xs hover:bg-blue-dark"
           >
             <Link href="/agendar" className="lg:hidden">
               AGENDAR
