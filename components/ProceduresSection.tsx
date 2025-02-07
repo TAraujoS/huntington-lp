@@ -178,7 +178,7 @@ export const ProceduresSection = () => {
                       //   setActiveSlide(index);
                       //   swiperRef.current?.slideToLoop(index, 0);
                       // }}
-                      aria-label={`Slide ${index + 1}`}
+                      aria-label={`procedure-image-${index + 1}`}
                     />
                   ))}
                 </div>
@@ -190,7 +190,11 @@ export const ProceduresSection = () => {
                 </h4>
 
                 <p className="text-sm font-normal text-gray-neutral leading-6 mt-3 hidden md:block">
-                  {slide.content}
+                  {slide.content.map((paragraph, index) => (
+                    <p key={index} className="mb-[2px] last:mt-3">
+                      {paragraph}
+                    </p>
+                  ))}
                 </p>
 
                 <Collapsible
