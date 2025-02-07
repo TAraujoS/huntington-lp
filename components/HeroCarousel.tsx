@@ -30,7 +30,7 @@ export const HeroCarousel = () => {
       alt: "Banner ProFiv 1",
     },
     {
-      srcMobile: "/assets/hero-mobile-2.svg",
+      srcMobile: "/assets/hero-mobile-3.svg",
       srcDesktop: "/assets/hero-desktop-3.svg",
       alt: "Banner ProFiv 2",
     },

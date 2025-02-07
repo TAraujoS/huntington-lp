@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Huntington: Centro de Reprodução Humana",
   description: "Centro de Reprodução Humana",
   icons: {
-    icon: "/assets/favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 

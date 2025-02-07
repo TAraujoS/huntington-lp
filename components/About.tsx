@@ -19,7 +19,7 @@ export const About = () => {
     >
       <div className="hidden lg:block lg:w-1/2 xl:w-1/3 lg:pl-10">
         <Image
-          src="/assets/about.png"
+          src="/assets/about.svg"
           alt="Imagem Quarto"
           width={500}
           height={300}

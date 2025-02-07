@@ -42,7 +42,7 @@ export const Header = () => {
 
         <div className="flex items-center">
           <Image
-            src="../assets/logo.svg"
+            src="../assets/icons/logo.svg"
             alt="Logo"
             width={100}
             height={100}

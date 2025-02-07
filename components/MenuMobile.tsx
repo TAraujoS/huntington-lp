@@ -58,7 +58,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
 
         <div className="flex items-center justify-center">
           <Image
-            src="../assets/logo.svg"
+            src="../assets/icons/logo.svg"
             alt="Logo"
             width={100}
             height={100}

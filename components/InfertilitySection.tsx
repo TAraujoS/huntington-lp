@@ -71,7 +71,7 @@ export const InfertilitySection = () => {
         <div className="hidden lg:flex flex-col gap-4 w-1/2 justify-evenly">
           <div className="flex bg-magenta-background text-magenta-text items-center p-6 gap-5 h-24">
             <Image
-              src="/assets/woman-icon.svg"
+              src="/assets/icons/woman-icon.svg"
               alt="Icone"
               width={26}
               height={26}
@@ -84,7 +84,7 @@ export const InfertilitySection = () => {
           </div>
           <div className="flex bg-blue-normal bg-opacity-10 text-blue-normal items-center p-6 gap-5 h-24">
             <Image
-              src="/assets/men-icon.svg"
+              src="/assets/icons/men-icon.svg"
               alt="Icone"
               width={20}
               height={20}
@@ -96,14 +96,14 @@ export const InfertilitySection = () => {
           </div>
           <div className="flex bg-purple bg-opacity-10 text-purple items-center p-6 gap-5 h-24">
             <Image
-              src="/assets/couple-icon.svg"
+              src="/assets/icons/couple-icon.svg"
               alt="Icone"
               width={32}
               height={32}
             />
             <span className="font-semibold text-3xl">20%</span>
             <p className="font-normal text-sm">
-              das causas estão nos homem, como varicocele e azoospermia.
+              sao devido à infertilidade do homem e da mulher, simultaneamente.
             </p>
           </div>
         </div>
@@ -135,7 +135,7 @@ export const InfertilitySection = () => {
           <SwiperSlide>
             <div className="flex w-full bg-magenta-background text-magenta-text items-center p-4 gap-2 mb-10 md:p-6 md:gap-4">
               <Image
-                src="/assets/woman-icon.svg"
+                src="/assets/icons/woman-icon.svg"
                 alt="Icone"
                 width={20}
                 height={20}
@@ -150,7 +150,7 @@ export const InfertilitySection = () => {
           <SwiperSlide>
             <div className="flex w-full bg-blue-normal bg-opacity-10 text-blue-normal items-center p-4 gap-2 mt-2 md:p-6 md:gap-4">
               <Image
-                src="/assets/men-icon.svg"
+                src="/assets/icons/men-icon.svg"
                 alt="Icone"
                 width={16}
                 height={16}
@@ -164,7 +164,7 @@ export const InfertilitySection = () => {
           <SwiperSlide>
             <div className="flex w-full bg-purple bg-opacity-10 text-purple items-center p-4 gap-2 mt-2 md:p-6 md:gap-4">
               <Image
-                src="/assets/couple-icon.svg"
+                src="/assets/icons/couple-icon.svg"
                 alt="Icone"
                 width={32}
                 height={32}

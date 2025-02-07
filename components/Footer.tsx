@@ -22,7 +22,12 @@ export const Footer = () => {
 
   return (
     <footer className="flex flex-col bg-blue-extralight px-8 py-10 lg:px-20 lg:py-14">
-      <Image src="../assets/logo.svg" alt="Logo" width={130} height={100} />
+      <Image
+        src="../assets/icons/logo.svg"
+        alt="Logo"
+        width={130}
+        height={100}
+      />
 
       <div className="flex flex-col lg:flex-row justify-between lg:py-10 lg:space-x-8">
         <div className="lg:space-y-5">
@@ -80,7 +85,7 @@ export const Footer = () => {
             >
               <div className="flex gap-3">
                 <Image
-                  src="./assets/instagram.svg"
+                  src="./assets/icons/instagram.svg"
                   alt="Instagram"
                   width={24}
                   height={24}
