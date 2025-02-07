@@ -155,6 +155,10 @@ html {
   min-width: 100%;
 }
 
+#rd-form-m5zotmdl .bricks-form__field {
+  margin-bottom: 20px !important;
+}
+
 #pf-solicitar-ligacao-4fb02f01d08a1d2c529d label {
   color: #717171 !important;
   font-size: 14px !important;

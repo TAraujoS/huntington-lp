@@ -85,46 +85,6 @@ export const proceduresContent = [
   },
 ];
 
-export const faqQuestions = [
-  {
-    question:
-      "Quantos casais sofrem com o problema de infertilidade atualmente?",
-    answer: "A infertilidade atinge cerca de 20% dos casais.",
-  },
-  {
-    question: "Quando um casal é considerado infértil?",
-    answer:
-      "Procuramos não utilizar o termo “casal infértil”. Podemos dizer que após 12 meses de relações sexuais regulares sem uso de método anticoncepcional, há suspeita de que algum fator esteja dificultando a concepção.",
-  },
-  {
-    question: "Qual procedimento o casal deve seguir?",
-    answer:
-      "Aquele casal que apresenta uma dificuldade para engravidar deve ser avaliado de forma individualizada para se buscar as causas do problema. E, para isso, usamos alguns exames de pesquisa básica, como:",
-    list: [
-      "Histerossalpingografia: é a colocação de contraste no interior do útero para possibilitar a visualização da cavidade uterina, permeabilidade e aspecto das trompas.",
-      "Ultrassonografia: permite avaliar o aspecto uterino e ovariano.",
-      "Espermograma: mostra informações sobre quantidade, motilidade e morfologia dos espermatozoides.",
-      "Exames hormonais: é necessário avaliar todos os hormônios que podem influenciar na ovulação ou no transcorrer de uma gravidez.",
-    ],
-  },
-  {
-    question: "O uso de laptop no colo afeta a fertilidade?",
-    answer:
-      "Sim. O calor gerado pelos laptops sobre a cintura masculina pode afetar a qualidade de sêmen, diminuindo sua quantidade e motilidade.",
-  },
-  {
-    question: "Fumar afeta a qualidade do sêmen?",
-    answer:
-      "A qualidade e a quantidade dos espermatozoides produzidos por fumantes ativos podem ser influenciadas por substâncias presentes no tabaco, como a nicotina e o THC, causando prejuízo reprodutivo.",
-  },
-  {
-    question:
-      "Bebês gerados a partir de técnicas de reprodução assistida tendem a nascer prematuros?",
-    answer:
-      "A prematuridade está relacionada a gestações múltiplas. Portanto, uma gravidez única por meio de fertilização in vitro não tem risco aumentado de prematuridade. Já uma gestação múltipla, seja espontânea ou pós-fertilização, tem mais riscos.",
-  },
-];
-
 export const medicalTeam = [
   {
     name: "DR. Eduardo Leme Alves da Motta",
@@ -179,5 +139,141 @@ export const medicalTeam = [
     picture: "/assets/doctor-7.svg",
     register: "COREN: 539.070",
     resume: "Coordenadora de Enfermagem",
+  },
+];
+
+export const faqQuestions = [
+  {
+    question:
+      "Quantos casais sofrem com o problema de infertilidade atualmente?",
+    answer: "A infertilidade atinge cerca de 20% dos casais.",
+  },
+  {
+    question: "Quando um casal é considerado infértil?",
+    answer:
+      "Procuramos não utilizar o termo 'casal infértil'. Podemos dizer que após 12 meses de relações sexuais regulares sem uso de método anticoncepcional, há suspeita de que algum fator esteja dificultando a concepção.",
+  },
+  {
+    question: "Qual procedimento o casal deve seguir?",
+    answer:
+      "Aquele casal que apresenta uma dificuldade para engravidar deve ser avaliado de forma individualizada para se buscar as causas do problema. E, para isso, usamos alguns exames de pesquisa básica, como: Histerossalpingografia, Ultrassonografia, Espermograma e Exames hormonais.",
+    list: [
+      "Histerossalpingografia: é a colocação de contraste no interior do útero para possibilitar a visualização da cavidade uterina, permeabilidade e aspecto das trompas.",
+      "Ultrassonografia: permite avaliar o aspecto uterino e ovariano.",
+      "Espermograma: mostra informações sobre quantidade, motilidade e morfologia dos espermatozoides.",
+      "Exames hormonais: é necessário avaliar todos os hormônios que podem influenciar na ovulação ou no transcorrer de uma gravidez.",
+    ],
+  },
+  {
+    question: "A infertilidade é um problema exclusivamente feminino?",
+    answer:
+      "Não. Cerca de 40% dos casos de infertilidade são decorrentes de problemas com a mulher, 40% com o homem e 20% são de uma combinação de fatores dos dois gêneros.",
+  },
+  {
+    question: "Quais são as principais causas da infertilidade feminina?",
+    answer:
+      "As principais causas de infertilidade são endometriose, disfunções na ovulação (fator ovulatório), alterações nas tubas (fator tubário) e no útero (fator uterino).",
+  },
+  {
+    question: "O que é endometriose?",
+    answer:
+      "Endometriose é a presença de tecido endometrial fora do útero, ou seja, o crescimento do tecido que recobre o interior do útero em outro local, como ovários, intestino e a parte externa do útero.",
+  },
+  {
+    question:
+      "Quais os principais fatores que aumentam os riscos de infertilidade feminina?",
+    answer:
+      "Gravidez tardia, obesidade ou baixo peso, exposição a doenças sexualmente transmissíveis, tabagismo e tratamentos oncológicos.",
+  },
+  {
+    question: "Como a idade interfere na fertilidade da mulher?",
+    answer:
+      "A reserva de óvulos da mulher se estabelece antes dela nascer e reduz ao longo da vida. Há perda na quantidade e na qualidade dos óvulos, o que leva a uma menor chance de engravidar.",
+  },
+  {
+    question: "Mulheres atletas podem ter dificuldade para engravidar?",
+    answer:
+      "Sim. Atletas de alto desempenho que praticam exercícios extenuantes podem ter amenorreia ou ausência de menstruação, o que pode afetar a ovulação.",
+  },
+  {
+    question:
+      "Mulher com útero retrovertido tem mais dificuldade para engravidar?",
+    answer:
+      "Não. O útero retrovertido é comum e não causa infertilidade. Entretanto, mulheres com este tipo de útero têm mais chance de ter endometriose, que pode causar infertilidade.",
+  },
+  {
+    question:
+      "A mulher que sofre um aborto tem menos chances de engravidar novamente?",
+    answer:
+      "Sim. Se o aborto for realizado em condições de risco, tal ação pode deixar sequelas, como lesões nas trompas, aderência das paredes do útero e infecções.",
+  },
+  {
+    question: "A obesidade diminui a fertilidade da mulher?",
+    answer:
+      "Sim. Mulheres que sofrem com obesidade mórbida têm mais problemas de fertilidade devido à relação entre os níveis de gordura corporal e a produção de insulina, o que pode causar a Síndrome do Ovário Policístico.",
+  },
+  {
+    question:
+      "O uso de pílula anticoncepcional por tempo prolongado pode causar infertilidade?",
+    answer:
+      "Não. O tempo de uso da pílula não interfere na fertilidade. Em alguns casos, ela pode até ajudar na prevenção da endometriose e de cistos nos ovários.",
+  },
+  {
+    question: "É preciso ter dois ovários e duas trompas para engravidar?",
+    answer: "Não. É possível engravidar com apenas um ovário e uma trompa.",
+  },
+  {
+    question: "Problemas de fertilidade feminina são hereditários?",
+    answer:
+      "A maioria não, mas há exceções. Algumas condições hereditárias podem afetar a fertilidade, como a Síndrome dos Ovários Policísticos e a endometriose.",
+  },
+  {
+    question: "A ansiedade pode atrapalhar as tentativas para engravidar?",
+    answer: "Sim, pois pode propiciar sofrimento ao casal.",
+  },
+  {
+    question:
+      "Após quantas tentativas de engravidar a mulher deve buscar orientação médica?",
+    answer:
+      "Após um ano de tentativas. Caso a mulher tenha 35 anos ou mais, este período deve ser de seis meses.",
+  },
+  {
+    question:
+      "Quais procedimentos os médicos usam para diagnosticar a infertilidade na mulher?",
+    answer:
+      "Dentre eles estão a avaliação da ovulação, o estudo das tubas (histerossalpingografia), a avaliação do útero (ultrassonografia transvaginal) e exames de imagem.",
+  },
+  {
+    question:
+      "Atualmente, quais são os principais meios para tratar a infertilidade feminina?",
+    answer:
+      "Os principais tratamentos são a fertilização in vitro (FIV), a inseminação intrauterina e o coito programado.",
+  },
+  {
+    question: "Quais são as principais causas da infertilidade masculina?",
+    answer:
+      "Varicocele, processos infecciosos, exposição a toxinas, obstrução dos ductos de transporte, alterações hormonais e fatores genéticos.",
+  },
+  {
+    question: "O que é varicocele?",
+    answer:
+      "Varicocele é a dilatação das veias do plexo pampiniforme, semelhante a varizes nas veias que trazem o sangue do testículo.",
+  },
+  {
+    question:
+      "Quais são os principais fatores que aumentam os riscos de infertilidade masculina?",
+    answer:
+      "Medicamentos utilizados em quimioterapia, radiação ionizante, calor excessivo, hormônios exógenos e infecções.",
+  },
+  {
+    question: "Como a idade interfere na fertilidade masculina?",
+    answer:
+      "A idade interfere menos do que na mulher, mas pode levar a redução na motilidade e na qualidade dos espermatozoides, principalmente após os 50 anos.",
+  },
+  {
+    question:
+      "Quais procedimentos os médicos usam para diagnosticar a infertilidade masculina?",
+    answer:
+      "O principal exame é o espermograma, que avalia o volume do sêmen, o número, a concentração, a motilidade e a morfologia dos espermatozoides.",
   },
 ];

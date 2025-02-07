@@ -109,7 +109,7 @@ export const ScheduleSection = () => {
   return (
     <section
       id="agendar"
-      className="py-10 flex flex-col items-center px-8 lg:px-20"
+      className="py-10 flex flex-col items-center px-8 lg:px-20 mt-5"
     >
       <h2 className="text-gray-title text-xl lg:text-2xl font-semibold mb-5">
         PREENCHA O <p className="text-blue-normal inline">FORMULÁRIO</p> ABAIXO

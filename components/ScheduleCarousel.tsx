@@ -12,7 +12,7 @@ export const ScheduleCarousel = () => {
   ];
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full mt-20">
       {carouselImages.map((image, index) => (
         <div key={index}>
           <Image
