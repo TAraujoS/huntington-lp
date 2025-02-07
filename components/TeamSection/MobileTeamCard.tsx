@@ -94,21 +94,6 @@ export const MobileTeamCard = () => {
         </div>
       </div>
 
-      <div className="flex justify-center mt-3 mb-6 space-x-2">
-        {medicalTeam.map((_, index) => (
-          <button
-            key={index}
-            className={`w-2 h-2 rounded-full ${
-              activeSlide === index
-                ? "bg-blue-normal"
-                : "bg-gray-light hover:bg-gray-default"
-            }`}
-            onClick={() => swiperRef.current?.slideTo(index)}
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
       <div className="relative w-[312px] flex flex-col gap-6">
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
@@ -125,6 +110,21 @@ export const MobileTeamCard = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+
+      <div className="flex justify-center mt-3 mb-6 space-x-2">
+        {medicalTeam.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full ${
+              activeSlide === index
+                ? "bg-blue-normal"
+                : "bg-gray-light hover:bg-gray-default"
+            }`}
+            onClick={() => swiperRef.current?.slideTo(index)}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
       </div>
     </div>
   );

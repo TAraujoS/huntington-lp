@@ -40,7 +40,7 @@ export const proceduresContent = [
       "Agora, demos mais um passo com a MAIA (Morphological Artificial Intelligence Assistance), um software de inteligência artificial* que, acoplado ao time-lapse, auxilia os embriologistas a refinar ainda mais a seleção do melhor embrião para transferência",
       "*A inteligência artificial é uma ferramenta de predição de probabilidades de prognóstico.",
     ],
-    image: "/assets/procedure-1.svg",
+    images: ["/assets/procedure-1.svg", "/assets/procedure-6.svg"],
     border: "border-magenta-text",
   },
   {
@@ -51,7 +51,7 @@ export const proceduresContent = [
       "O congelamento de óvulos é uma opção viável para preservar a fertilidade, especialmente antes dos 35 anos, quando as taxas de gravidez são mais altas. Mulheres que congelam óvulos aos 35 anos mantêm chances semelhantes às de uma mulher dessa idade ao tentar engravidar mais tarde, a partir de embriões formados com os óvulos congelados. Além das chances em si, o congelamento também minimiza os riscos de abortos e condições como a Síndrome de Down, que aumentam com a idade",
       "Quer saber mais? Entre em contato.",
     ],
-    image: "/assets/procedure-2.svg",
+    images: ["/assets/procedure-2.svg"],
     border: "border-orange-text",
   },
   {
@@ -62,7 +62,7 @@ export const proceduresContent = [
       "Esse método é menos invasivo que a fertilização in vitro e pode ser realizado com esperma do parceiro ou doador. A inseminação intrauterina é uma opção para casais que desejam aumentar suas chances de concepção, especialmente quando fatores como idade ou condições de saúde afetam a fertilidade. O acompanhamento médico é essencial para determinar o momento ideal e avaliar a resposta ao tratamento, garantindo o melhor resultado possível na busca pela gravidez.",
       "Saiba mais, agende sua consulta.",
     ],
-    image: "/assets/procedure-3.svg",
+    images: ["/assets/procedure-3.svg"],
     border: "border-purple",
   },
   {
@@ -73,7 +73,7 @@ export const proceduresContent = [
       "Atualmente, com os avanços da medicina, a chance de cura de um câncer é muito grande, o que justifica a preocupação com a fertilidade após o tratamento finalizado",
       "Para saber mais, agende sua consulta com um dos nossos especialistas.",
     ],
-    image: "/assets/procedure-4.svg",
+    images: ["/assets/procedure-4.svg"],
     border: "border-blue-normal",
   },
   {
@@ -84,7 +84,7 @@ export const proceduresContent = [
       "No nosso programa de ovodoação, a doadora de óvulos passa por um rigoroso protocolo de exames, como sorologias, cariótipo e avaliação do histórico de saúde. Além disso, a identidade tanto da doadora quanto da receptora permanece anônima, garantindo um processo ético e seguro para ambas.",
       "Se quiser saber mais sobre o tratamento com óvulos doados, não deixe de entrar em contato conosco e conversar com um especialista.",
     ],
-    image: "/assets/procedure-5.svg",
+    images: ["/assets/procedure-5.svg"],
     border: "border-magenta-text",
   },
 ];

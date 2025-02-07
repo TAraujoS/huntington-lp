@@ -4,10 +4,9 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import { Swiper as SwiperCore } from "swiper";
 import "swiper/css";
-import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { cn, proceduresContent } from "@/lib/utils";
@@ -27,6 +26,7 @@ export const ProceduresSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const swiperRef = useRef<SwiperCore | null>(null);
   const contentSwiperRef = useRef<SwiperCore | null>(null);
+
   const contentLimit = 545;
 
   useEffect(() => {
@@ -61,8 +61,7 @@ export const ProceduresSection = () => {
 
         <div className="block lg:hidden w-full">
           <Swiper
-            modules={[Navigation, Autoplay, Pagination]}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            modules={[Navigation, Pagination]}
             slidesPerView={3.5}
             loop={true}
             className="w-11/12"
@@ -140,48 +139,53 @@ export const ProceduresSection = () => {
       </div>
 
       <Swiper
-        modules={[Navigation, Autoplay]}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        modules={[Navigation]}
         onSlideChange={(swiper) => {
           if (swiper.realIndex !== activeSlide) {
             setActiveSlide(swiper.realIndex);
           }
         }}
-        navigation
         onSwiper={(swiper) => (contentSwiperRef.current = swiper)}
         slidesPerView={1}
         loop={true}
         className="procedure-swiper w-full max-w-7xl relative"
       >
+        <button
+          className="absolute -left-2 top-72 transform -translate-y-1/2 text-gray-default p-2 rounded-full z-10 hidden lg:block"
+          onClick={() => contentSwiperRef.current?.slidePrev()}
+        >
+          <ChevronLeft className="w-9 h-9" />
+        </button>
+        <button
+          className="absolute -right-2 top-72 transform -translate-y-1/2 text-gray-default p-2 rounded-full z-10 hidden lg:block"
+          onClick={() => contentSwiperRef.current?.slideNext()}
+        >
+          <ChevronRight className="w-9 h-9" />
+        </button>
+
         {proceduresContent.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="w-full flex flex-col lg:flex-row lg:gap-8 mt-10 gap-4 px-10 lg:px-10 md:p-6 max-w-7xl">
               <div className="h-36 lg:h-full w-full md:h-52 lg:w-1/2 lg:order-2 lg:flex self-center relative">
-                <Image
-                  src={proceduresContent[activeSlide].image}
-                  alt={`Imagem ${proceduresContent[activeSlide].title}`}
-                  width={500}
-                  height={500}
-                  className="w-full h-full object-cover"
-                />
-
-                <div className="hidden absolute lg:flex w-full justify-center z-20 bottom-4 space-x-2 mx-auto">
-                  {proceduresContent.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`w-2 h-2 rounded-full ${
-                        activeSlide === index
-                          ? "bg-blue-default"
-                          : "bg-gray-light hover:bg-gray-default"
-                      }`}
-                      // onClick={() => {
-                      //   setActiveSlide(index);
-                      //   swiperRef.current?.slideToLoop(index, 0);
-                      // }}
-                      aria-label={`procedure-image-${index + 1}`}
-                    />
+                <Swiper
+                  modules={[Pagination]}
+                  slidesPerView={1}
+                  pagination={{ clickable: true }}
+                  loop={true}
+                  className="w-full h-full"
+                >
+                  {slide.images.map((imgSrc, imgIndex) => (
+                    <SwiperSlide key={imgIndex}>
+                      <Image
+                        src={imgSrc}
+                        alt={`Imagem ${slide.title} ${imgIndex + 1}`}
+                        width={500}
+                        height={500}
+                        className="w-full h-full object-cover"
+                      />
+                    </SwiperSlide>
                   ))}
-                </div>
+                </Swiper>
               </div>
 
               <div className="lg:w-1/2">
@@ -203,28 +207,46 @@ export const ProceduresSection = () => {
                   className="block md:hidden"
                 >
                   <div>
-                    <p className="text-xs font-normal text-gray-neutral leading-5 block md:hidden">
-                      {isOpen
-                        ? proceduresContent[activeSlide].content
-                        : `${proceduresContent[activeSlide].content.slice(
-                            0,
-                            contentLimit
-                          )}...`}
-                    </p>
+                    {slide.content.map((paragraph, index) => {
+                      if (index < 2) {
+                        return (
+                          <p
+                            key={index}
+                            className="text-xs font-normal text-gray-neutral leading-5 mb-[2px]"
+                          >
+                            {index === 1 && paragraph.length > contentLimit
+                              ? `${paragraph.slice(0, contentLimit)}...`
+                              : paragraph}
+                          </p>
+                        );
+                      }
+
+                      return isOpen ? (
+                        <p
+                          key={index}
+                          className="text-xs font-normal text-gray-neutral leading-5 mb-[2px] last:mt-3"
+                        >
+                          {paragraph}
+                        </p>
+                      ) : null;
+                    })}
                   </div>
 
-                  <CollapsibleTrigger asChild>
-                    <span className="text-sm font-normal text-gray-neutral bg-light p-1 rounded-sm underline cursor-pointer">
-                      {isOpen ? "LER MENOS" : "LER MAIS"}
-                    </span>
-                  </CollapsibleTrigger>
+                  {(slide.content.length > 2 ||
+                    slide.content[1].length > contentLimit) && (
+                    <CollapsibleTrigger asChild>
+                      <span className="text-sm font-normal text-gray-neutral bg-light p-1 rounded-sm underline cursor-pointer">
+                        {isOpen ? "LER MENOS" : "LER MAIS"}
+                      </span>
+                    </CollapsibleTrigger>
+                  )}
                 </Collapsible>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex justify-center lg:justify-start mt-4">
+      <div className="flex justify-center self-start lg:self-center pl-10 md:pl-6 lg:pl-0 mt-2 lg:mt-0">
         <Button
           variant="default"
           className="bg-blue-normal text-white font-black text-sm hover:bg-blue-dark p-5 w-48"

@@ -219,7 +219,7 @@ export const InfertilitySection = () => {
       </div>
 
       <div className="w-full mt-2 relative">
-        <div className="lg:hidden flex min-w-64 h-[86px] p-4 bg-blue-normal border-[1px] rounded-[3px] mx-auto my-6 items-center gap-2">
+        <div className="lg:hidden md:max-w-96 flex min-w-64 h-[86px] p-4 bg-blue-normal border-[1px] rounded-[3px] mx-auto my-6 items-center gap-2">
           <p className="font-normal text-sm text-white">
             Para saber mais, acesse as dúvidas frequentes
           </p>
