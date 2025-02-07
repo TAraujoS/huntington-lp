@@ -36,7 +36,7 @@ export const InfertilitySection = () => {
       id="infertilidade"
       className="flex flex-col items-center justify-center p-8 md:px-20 py-8 gap-4 max-w-7xl mx-auto"
     >
-      <h2 className="text-blue-normal text-2xl font-semibold my-2">
+      <h2 className="text-blue-normal text-xl lg:text-2xl font-semibold my-2">
         INFERTILIDADE
       </h2>
 
@@ -61,7 +61,7 @@ export const InfertilitySection = () => {
           <p>
             A infertilidade é uma doença que atinge o casal simultaneamente e de
             vários formas. Com características confusas, afeta{" "}
-            <span className="font-semibold inline">diversos aspectos</span>
+            <span className="font-semibold inline">diversos aspectos </span>
             da vida das pessoas - a autoestima, a capacidade de planejar o
             futuro, o próprio relacionamento do casal consigo e com os outros,
             além de profundos sentimentos de culpa, frustração e nervosismo.

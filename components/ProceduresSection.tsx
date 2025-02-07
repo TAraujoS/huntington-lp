@@ -43,7 +43,9 @@ export const ProceduresSection = () => {
       id="procedimentos"
       className="bg-light pt-10 pb-8 flex flex-col items-center"
     >
-      <h2 className="text-blue-normal text-lg font-semibold">PROCEDIMENTOS</h2>
+      <h2 className="text-blue-normal text-xl lg:text-2xl font-semibold">
+        PROCEDIMENTOS
+      </h2>
 
       <div className="relative flex mt-6 w-full px-8 max-w-7xl">
         <button

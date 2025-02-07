@@ -121,11 +121,11 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
           doctor.lattes ? "p-4" : "p-4 pb-2"
         )}
       >
-        <h5 className="text-gray-title font-semibold text-[10px] w-4/5 uppercase">
+        <h5 className="text-gray-title font-semibold text-xs w-4/5 uppercase">
           {doctor.name}
         </h5>
 
-        <span className="text-[10px] text-gray-title font-normal">
+        <span className="text-[11px] text-gray-title font-normal">
           {doctor.resume}
         </span>
 

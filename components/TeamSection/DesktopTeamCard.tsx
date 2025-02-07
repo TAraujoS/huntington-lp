@@ -32,15 +32,15 @@ export const DesktopTeamCard = () => {
             DRA. Thais Sanches Domingues Cury
           </h5>
 
-          <p className="text-sm text-gray-title font-normal">
+          <p className="text-base text-gray-title font-normal">
             CRM-SP 104.252 | RQE/RA 97.7111
           </p>
 
-          <span className="text-sm text-gray-title font-normal">
+          <span className="flex text-base text-gray-title font-normal mt-1">
             Coordenadora
           </span>
 
-          <p className="flex items-center gap-2 text-blue-normal font-bold text-sm focus:ring-0 focus:outline-none pt-0">
+          <p className="flex items-center gap-2 text-blue-normal font-bold text-xs focus:ring-0 focus:outline-none pt-0">
             SAIBA MAIS ABAIXO:
           </p>
 
@@ -121,15 +121,15 @@ export const DesktopTeamCard = () => {
 
             <div className="flex w-full gap-2">
               <PopoverTrigger asChild>
-                <span className="text-xs font-normal text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal cursor-pointer">
+                <span className="text-[11px] font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal cursor-pointer">
                   LATTES
                 </span>
               </PopoverTrigger>
 
-              <span className="text-xs font-normal text-gray-title bg-light hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal p-3 rounded-sm underline cursor-pointer">
+              <span className="text-[11px] font-normal text-gray-title bg-light hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal p-2 rounded-sm underline cursor-pointer">
                 VÍDEO
               </span>
-              <span className="text-xs font-normal text-gray-title bg-light hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal p-3 rounded-sm underline cursor-pointer">
+              <span className="text-[11px] font-normal text-gray-title bg-light hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal p-2 rounded-sm underline cursor-pointer">
                 INSTAGRAM
               </span>
             </div>
