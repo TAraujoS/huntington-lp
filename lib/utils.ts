@@ -7,12 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 
 export const navItems = [
   {
-    label: "QUEM SOMOS",
-    href: "#quem-somos",
-    dropdown: [
-      { label: "SOBRE NÓS", href: "#quem-somos" },
-      { label: "INFRAESTRUTURA", href: "#infraestrutura" },
-    ],
+    label: "SOBRE NÓS",
+    href: "#sobre-nos",
   },
   { label: "INFERTILIDADE", href: "#infertilidade" },
   {

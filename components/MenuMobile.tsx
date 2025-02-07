@@ -84,35 +84,18 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
       </div>
 
       <div className="flex flex-col py-8 px-4">
-        <Accordion type="single" collapsible>
-          <AccordionItem value="quem-somos">
-            <AccordionTrigger className="text-gray-neutral font-bold text-xs hover:no-underline focus:ring-0 focus:outline-none data-[state=open]:text-blue-normal">
-              QUEM SOMOS
-            </AccordionTrigger>
-            <AccordionContent>
-              <Link
-                href="#quem-somos"
-                className="block text-gray-neutral font-normal text-xs hover:text-primary py-1"
-                onClick={() => {
-                  onClose();
-                  handleNavigation("#quem-somos");
-                }}
-              >
-                SOBRE NÓS
-              </Link>
-              <Link
-                href="#infraestrutura"
-                className="block text-gray-neutral font-normal text-xs hover:text-primary py-2"
-                onClick={() => {
-                  onClose();
-                  handleNavigation("#infraestrutura");
-                }}
-              >
-                INFRAESTRUTURA
-              </Link>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+        <div className="border-b border-gray-200 py-4">
+          <Link
+            href="#sobre-nos"
+            className="block text-gray-neutral font-bold text-xs hover:text-primary"
+            onClick={() => {
+              onClose();
+              handleNavigation("#sobre-nos");
+            }}
+          >
+            SOBRE NÓS
+          </Link>
+        </div>
 
         <div className="border-b border-gray-200 py-4">
           <Link

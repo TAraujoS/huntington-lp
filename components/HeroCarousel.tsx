@@ -25,19 +25,19 @@ export const HeroCarousel = () => {
 
   const carouselImages = [
     {
-      srcMobile: "/assets/hero-mobile-2.svg",
-      srcDesktop: "/assets/hero-desktop-2.svg",
+      srcMobile: "/assets/hero-mobile-1.svg",
+      srcDesktop: "/assets/hero-desktop-1.svg",
       alt: "Banner ProFiv 1",
     },
     {
-      srcMobile: "/assets/hero-mobile-3.svg",
-      srcDesktop: "/assets/hero-desktop-3.svg",
+      srcMobile: "/assets/hero-mobile-2.svg",
+      srcDesktop: "/assets/hero-desktop-2.svg",
       alt: "Banner ProFiv 2",
     },
   ];
 
   return (
-    <section className="relative w-full">
+    <section className="relative w-full pt-20">
       <Swiper
         modules={[Navigation, Autoplay, Pagination]}
         autoplay={{ delay: 5000, disableOnInteraction: false }}

@@ -14,22 +14,22 @@ export const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <section
-      id="quem-somos"
-      className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 gap-4 max-w-7xl mx-auto bg-blue-normal bg-opacity-10 lg:bg-transparent"
+      id="sobre-nos"
+      className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 mt-3 gap-4 max-w-7xl mx-auto bg-blue-normal bg-opacity-10 lg:bg-transparent"
     >
-      <div className="hidden lg:block lg:w-1/2 xl:w-1/3 lg:pl-10">
+      <div className="hidden h-[530px] lg:block lg:w-1/2 xl:w-1/3 lg:pl-10">
         <Image
           src="/assets/about.svg"
           alt="Imagem Quarto"
           width={500}
-          height={300}
+          height={500}
           loading="lazy"
-          className="rounded-md"
+          className="rounded-md h-full w-full object-fill"
         />
       </div>
 
-      <div className="w-full max-w-2xl px-6 lg:w-1/2 xl:w-2/3">
-        <h2 className="text-center lg:text-left text-2xl font-semibold text-gray-neutral">
+      <div className="w-full max-w-2xl px-4 lg:px-6 lg:w-1/2 xl:w-2/3">
+        <h2 className="text-center lg:text-left text-lg lg:text-2xl font-semibold text-gray-neutral">
           SOBRE <span className="text-blue-normal">NÓS</span>
         </h2>
 
@@ -44,7 +44,7 @@ export const About = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-4 text-gray-neutral font-normal text-sm mt-6">
+        <div className="flex flex-col gap-4 text-gray-neutral font-normal text-xs lg:text-base mt-6">
           <p>
             O <span className="font-bold">ProFIV</span> tem como objetivo
             oferecer aos pacientes com problemas de infertilidade um tratamento
