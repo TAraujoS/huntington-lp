@@ -189,13 +189,13 @@ export const ProceduresSection = () => {
                   {slide.title}
                 </h4>
 
-                <p className="text-sm font-normal text-gray-neutral leading-6 mt-3 hidden md:block">
+                <div className="text-sm font-normal text-gray-neutral leading-6 mt-3 hidden md:block">
                   {slide.content.map((paragraph, index) => (
                     <p key={index} className="mb-[2px] last:mt-3">
                       {paragraph}
                     </p>
                   ))}
-                </p>
+                </div>
 
                 <Collapsible
                   open={isOpen}

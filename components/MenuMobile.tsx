@@ -57,13 +57,21 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
         </button>
 
         <div className="flex items-center justify-center">
-          <Image
-            src="../assets/icons/logo.svg"
-            alt="Logo"
-            width={100}
-            height={100}
-            className="w-24 h-9"
-          />
+          <Link
+            href="/"
+            onClick={() => {
+              onClose();
+              handleNavigation("");
+            }}
+          >
+            <Image
+              src="../assets/icons/logo.svg"
+              alt="Logo"
+              width={100}
+              height={100}
+              className="w-24 h-9"
+            />
+          </Link>
         </div>
 
         <button
@@ -160,7 +168,9 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
             variant="default"
             className="w-28 bg-blue-normal text-white font-black text-xs hover:bg-blue-dark"
           >
-            <Link href="/agendar">AGENDAR </Link>
+            <Link href="/agendar" onClick={() => onClose()}>
+              AGENDAR
+            </Link>
           </Button>
         </div>
       </div>

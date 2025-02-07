@@ -41,13 +41,15 @@ export const Header = () => {
         </button>
 
         <div className="flex items-center">
-          <Image
-            src="../assets/icons/logo.svg"
-            alt="Logo"
-            width={100}
-            height={100}
-            className="w-24 h-9"
-          />
+          <Link href="/" onClick={() => handleNavigation("")}>
+            <Image
+              src="../assets/icons/logo.svg"
+              alt="Logo"
+              width={100}
+              height={100}
+              className="w-24 h-9"
+            />
+          </Link>
         </div>
 
         <nav className="hidden lg:flex justify-between w-3/5 space-x-8">
