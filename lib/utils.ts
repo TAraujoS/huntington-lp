@@ -23,6 +23,7 @@ export const navItems = [
     ],
   },
   { label: "EQUIPE", href: "#equipe" },
+  { label: "DÚVIDAS FREQUENTES", href: "/duvidas-frequentes" },
 ];
 
 export const proceduresContent = [
@@ -74,7 +75,7 @@ export const proceduresContent = [
   },
   {
     title: "OVODOAÇÃO",
-    icon: "/assets/icons/procedure-icon-5.svg",
+    icon: "/assets/icons/procedure-icon-5.png",
     content: [
       "A ovodoação, ou o tratamento com óvulos doados, é indicada principalmente para mulheres com diminuição da reserva ovariana devido à idade avançada, falência ovariana prematura ou tratamentos oncológicos. Muitas vezes, os casais já enfrentaram dificuldades em tentativas anteriores e recorrem à doação como uma opção viável para engravidar. É importante ressaltar que a idade do óvulo é crucial para o sucesso do tratamento, e no ProFIV são priorizadas doadoras de até 35 anos, o que otimiza as chances de gravidez",
       "No nosso programa de ovodoação, a doadora de óvulos passa por um rigoroso protocolo de exames, como sorologias, cariótipo e avaliação do histórico de saúde. Além disso, a identidade tanto da doadora quanto da receptora permanece anônima, garantindo um processo ético e seguro para ambas.",
@@ -83,6 +84,10 @@ export const proceduresContent = [
     images: ["/assets/procedure-5.svg"],
     border: "border-magenta-text",
   },
+];
+
+export const firstDoctorLattes = [
+  "Possui graduação em medicina pela Universidade Estadual Paulista Júlio de Mesquita Filho (2001) e residência médica em Ginecologia e Obstetrícia, na Universidade Federal de São Paulo - Escola Paulista de Medicina (2005), tendo concluído residência específica em Reprodução Humana nesta Universidade, em 2006. Atualmente obteve o título de doutora em Ciências, pela Universidade Federal de São Paulo - UNIFESP/EPM. É médica ginecologista sênior, especialista em Reprodução Humana, pelo Grupo Huntington desde 2007. Permanece como coordenadora médica do setor de doação de óvulos e da unidade Santa Joana.",
 ];
 
 export const medicalTeam = [
@@ -94,8 +99,16 @@ export const medicalTeam = [
     resume:
       "Especialidade em Reproduçãoa Assistida e Corresponsável pelo ProFIV",
     video: "https://youtu.be/MuQ60KX_AlU",
-    lattes:
-      "Fundador da Huntington; Corresponsável pelo Centro de Reprodução Humana Santa Joana; Professor Adjunto do Departamento de Ginecologia da Escola Paulista de Medicina – Unifesp; Especialização em Reprodução Humana na Huntington Reproductive Center, Califórnia – EUA; Mestrado e Doutorado em Medicina pelo Departamento de Ginecologia – Escola Paulista de Medicina Unifesp; Especialização em Ginecologia e Obstetrícia pela FEBRASGO; Residência Médica em Ginecologia e Obstetrícia pela Escola Paulista de Medicina; Médico formado pela Faculdade de Ciências Médicas da Pontifícia Universidade Católica de Campinas..",
+    lattes: [
+      "Fundador da Huntington;",
+      "Corresponsável pelo Centro de Reprodução Humana Santa Joana;",
+      "Professor Adjunto do Departamento de Ginecologia da Escola Paulista de Medicina – Unifesp;",
+      "Especialização em Reprodução Humana na Huntington Reproductive Center, Califórnia – EUA;",
+      "Mestrado e Doutorado em Medicina pelo Departamento de Ginecologia – Escola Paulista de Medicina Unifesp;",
+      "Especialização em Ginecologia e Obstetrícia pela FEBRASGO;",
+      "Residência Médica em Ginecologia e Obstetrícia pela Escola Paulista de Medicina;",
+      "Médico formado pela Faculdade de Ciências Médicas da Pontifícia Universidade Católica de Campinas.",
+    ],
   },
   {
     name: "DR. Marcos Shiroma",
@@ -104,8 +117,12 @@ export const medicalTeam = [
     rqe: "RQE: 524.171",
     resume: "Especialidade em Reprodução assistida",
     insta: "https://www.instagram.com/drmarcosshiroma/",
-    lattes:
-      "Graduação pela Faculdade de Medicina da USP (FMUSP) Residência Médica em Ginecologia e Obstetrícia pela FMUSP Ex-Preceptor da Residência Médica e Internato em Ginecologia da FMUSP Especialização em Endoscopia Ginecológica na FMUSP Especialização em Reprodução Humana na FMUSP Doutor em Ciências pela USP",
+    lattes: [
+      "Graduação pela Faculdade de Medicina da USP (FMUSP) Residência Médica em Ginecologia e Obstetrícia pela FMUSP;",
+      "Ex-Preceptor da Residência Médica e Internato em Ginecologia da FMUSP;",
+      "Especialização em Endoscopia Ginecológica na FMUSP Especialização em Reprodução Humana na FMUSP;",
+      "Doutor em Ciências pela USP.",
+    ],
   },
   {
     name: "DR. Guilherme Wood",
@@ -115,8 +132,13 @@ export const medicalTeam = [
     resume: "Especialidade em Urologista",
     video: "https://youtu.be/Jj0XvSKEnhM",
     insta: "https://www.instagram.com/drguilhermewood/",
-    lattes:
-      "Fellowship em urologia e andrologia pelo Massachusetts General Hospital Harvard University – Boston-EUA; Titulo de especialista em urologia pela Sociedade Brasileira de Urologia (SBU); Residência médica em urologia pelo Hospital das Clínicas da Universidade de São Paulo (USP); Residência médica em cirurgia geral pelo Hospital das Clínicas da Universidade de São Paulo (USP); Médico formado pela Faculdade de Medicina da Universidade de São Paulo (USP).",
+    lattes: [
+      "Fellowship em urologia e andrologia pelo Massachusetts General Hospital Harvard University – Boston-EUA;",
+      "Titulo de especialista em urologia pela Sociedade Brasileira de Urologia (SBU);",
+      "Residência médica em urologia pelo Hospital das Clínicas da Universidade de São Paulo (USP);",
+      "Residência médica em cirurgia geral pelo Hospital das Clínicas da Universidade de São Paulo (USP);",
+      "Médico formado pela Faculdade de Medicina da Universidade de São Paulo (USP).",
+    ],
   },
   {
     name: "DRA. Ana Luiza Nunes",
@@ -125,8 +147,15 @@ export const medicalTeam = [
     rqe: "RQE: 122.185",
     resume: "Especialidade em Reprodução assistida",
     insta: "https://www.instagram.com/draanaluizanunes/",
-    lattes:
-      "Médica responsável pelo aconselhamento genético do Grupo Huntington; Fellow na Vrije Universiteit Brussel na Bélgica; Fellow em Reprodução Humana pela Escola Paulista de Medicina (UNIFESP/ EPM). Especialização em Reprodução Humana pelaFaculdade de Medicina do ABC; Título de Especialista em Ginecologia e Obstetrícia pela Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO); Residência Médica em Ginecologia e Obstetrícia pela Faculdade de Medicina do ABC; Médica formada pela Faculdade de Medicina do ABC.",
+    lattes: [
+      "Médica responsável pelo aconselhamento genético do Grupo Huntington;",
+      "Fellow na Vrije Universiteit Brussel na Bélgica;",
+      "Fellow em Reprodução Humana pela Escola Paulista de Medicina (UNIFESP/ EPM);",
+      "Especialização em Reprodução Humana pelaFaculdade de Medicina do ABC;",
+      "Título de Especialista em Ginecologia e Obstetrícia pela Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO);",
+      "Residência Médica em Ginecologia e Obstetrícia pela Faculdade de Medicina do ABC;",
+      "Médica formada pela Faculdade de Medicina do ABC.",
+    ],
   },
   {
     name: "Manuela Marquez Amaral",
@@ -275,5 +304,136 @@ export const faqQuestions = [
       "Quais procedimentos os médicos usam para diagnosticar a infertilidade masculina?",
     answer:
       "O principal exame é o espermograma, que avalia o volume do sêmen, o número, a concentração, a motilidade e a morfologia dos espermatozoides.",
+  },
+  {
+    question: "Há relação entre potência sexual e fertilidade?",
+    answer:
+      "Na grande maioria dos homens, não. A produção dos espermatozoides (fertilidade) e da testosterona (potência sexual) é feita por células diferentes no testículo. Casais sem perda de potência sexual podem ter algum tipo de problema de infertilidade que dificulte a gravidez.",
+  },
+  {
+    question: "O uso de laptop no colo afeta a fertilidade?",
+    answer:
+      "Sim. O calor gerado pelos laptops sobre a cintura masculina pode afetar a qualidade de sêmen, diminuindo sua quantidade e motilidade.",
+  },
+  {
+    question: "Andar de bicicleta pode ser prejudicial ao homem?",
+    answer:
+      "Sim. A prática, de forma excessiva, pode causar lesões traumáticas ou aquecimento dos testículos ou do escroto. Em estudo realizado pela Universidade de Boston, constatou-se que 40% dos ciclistas têm esperma de baixa qualidade contra 27% dos sedentários.",
+  },
+  {
+    question: "Fumar afeta a qualidade do sêmen?",
+    answer:
+      "A qualidade e a quantidade dos espermatozoides produzidos por fumantes ativos podem ser influenciadas por substâncias presentes no tabaco, como a nicotina e o THC, causando prejuízo reprodutivo.",
+  },
+  {
+    question: "A caxumba pode influir na fertilidade masculina?",
+    answer:
+      "Sim. A infecção pode atingir não só a glândula parótida, mas também os testículos, causando até atrofia. A 'orquite' (infecção dos testículos) ocorre em 20% a 30% dos homens, segundo dados reunidos pela Vigilância Epidemiológica do Ministério da Saúde.",
+  },
+  {
+    question: "É possível tratar a infertilidade com o uso de medicamentos?",
+    answer:
+      "Em alguns casos, sim. Por exemplo: em mulheres que tem Síndrome dos Ovários Policísticos (disfunção na ovulação), a indução da ovulação é feita com medicações.",
+  },
+  {
+    question:
+      "Bebês gerados a partir de técnicas de reprodução assistida tendem a nascer prematuros?",
+    answer:
+      "A prematuridade está relacionada a gestações múltiplas. Portanto, uma gravidez única por meio de fertilização in vitro não tem risco aumentado de prematuridade. Já uma gestação múltipla, seja espontânea ou pós-fertilização, tem mais riscos.",
+  },
+  {
+    question:
+      "Quais fatores prejudicam o sucesso dos tratamentos de reprodução assistida?",
+    answer:
+      "A FIV – fertilização in vitro, por exemplo, apresenta uma chance de sucesso de 50 a 60% por tentativa, em média, representando o dobro da chance mensal de um casal sem problemas para engravidar. Os dois principais fatores que prejudicam o sucesso do tratamento são a quantidade e qualidade dos óvulos e a idade da mulher. Outros fatores relevantes são a baixa quantidade e qualidade de espermatozoides, endometriose grave e associação de múltiplas causas de infertilidade.",
+  },
+  {
+    question: "Quais são os riscos das técnicas de reprodução humana?",
+    answer:
+      "O principal é a gestação múltipla, pois, como os tratamentos envolvem a indução da ovulação, aumenta-se a chance de múltiplos óvulos e, consequentemente, múltiplos embriões. Outro fator é a Síndrome de Hiperestimulação Ovariana, que consiste em uma resposta exagerada às medicações usadas na indução da ovulação. No entanto, muito se tem feito para amenizar este risco. É válido ressaltar que a chance de gestação múltipla é menor do que a chance de gestação única.",
+  },
+  {
+    question: "O tratamento sempre resulta em gêmeos e trigêmeos?",
+    answer:
+      "Não. A taxa de gêmeos é de 20%. Trigêmeos ou mais representam apenas 4%.",
+  },
+  {
+    question: "O que é e quando está indicada a inseminação artificial?",
+    answer:
+      "A inseminação artificial consiste na colocação dos espermatozoides preparados e concentrados no interior da cavidade uterina, no momento da ovulação. Indicada principalmente naqueles casos com alteração masculina leve/moderada, na qual 'preparamos' e concentramos os espermatozoides, colocando-os mais 'próximos' dos óvulos.",
+  },
+  {
+    question: "Qual a chance de gravidez com a inseminação artificial?",
+    answer:
+      "A taxa de sucesso de uma inseminação artificial depende muito das causas envolvidas. É essencial a permeabilidade, pelo menos de uma das trompas, assim como um número mínimo de espermatozoides. Desta maneira temos uma taxa que varia de 15 a 20%.",
+  },
+  {
+    question: "O que é fertilização in vitro? Qual a taxa de sucesso?",
+    answer:
+      "A fertilização in vitro (FIV) é o chamado 'bebê de proveta', técnica em que retiramos os óvulos para fertilização em laboratório, sendo formados embriões que após alguns dias são transferidos para o útero. A taxa de sucesso depende de vários fatores, sendo o principal a qualidade dos óvulos, que está diretamente relacionada à idade da paciente. Com uma boa qualidade ovular temos de 55 a 60% de sucesso por tentativa.",
+  },
+  {
+    question:
+      "Sexo do bebê: no tratamento de FIV tem como saber o sexo do bebê?",
+    answer:
+      "Atualmente existe o Diagnóstico Genético Pré-implantacional (PGD), exame genético que analisa os cromossomos do embrião e que pode ser realizado após a fertilização dos óvulos no processo de FIV (fertilização in vitro), com o objetivo de evitar o desenvolvimento e nascimento de bebês com problemas cromossômicos. Na maioria das vezes é indicado para casais que têm um histórico de doenças genéticas hereditárias. Este exame permite identificar o sexo do embrião, no entanto, não é considerado ético fazê-lo somente para este intuito.",
+  },
+  {
+    question: "O que significa a sigla ICSI? Qual a taxa de sucesso?",
+    answer:
+      "ICSI significa injeção intracitoplasmática de espermatozoide, isto é, injetamos o espermatozoide no interior do óvulo. Desta maneira buscamos aumentar as chances de fertilização. Através dessa manobra conseguimos pular uma etapa muito grande da natureza e elevar nossas taxas de fecundação e de sucesso. As taxas de sucesso da ICSI se assemelham às da FIV.",
+  },
+  {
+    question: "Quando a ICSI está indicada?",
+    answer:
+      "A ICSI é indicada principalmente em casos de alterações seminais importantes, porém muitas vezes é utilizada para 'garantir' uma melhor fertilização dos óvulos.",
+  },
+  {
+    question: "Quando a utilização de óvulos doados é indicada?",
+    answer:
+      "Óvulos doados são utilizados por aquelas mulheres que não conseguem produzi-los ou quando a qualidade ovular esteja ruim a ponto de não gerar uma gestação saudável.",
+  },
+  {
+    question: "O que é laparoscopia?",
+    answer:
+      "Videolaparoscopia ou simplesmente laparoscopia é um procedimento em que se coloca uma 'câmera' no interior da cavidade abdominal e assim avaliam-se órgãos intra-abdominais, como trompas, intestino, útero, etc. Podemos realizar a laparoscopia diagnóstica com a finalidade apenas de observar e realizar um diagnóstico (como endometriose, por exemplo), ou cirúrgica, na qual poderemos realizar algum procedimento (retirada de cisto, endometriose, miomas, etc.). A grande vantagem deste tipo de cirurgia é sua pequena agressão à mulher (pequenos 'furinhos').",
+  },
+  {
+    question: "O que é histeroscopia?",
+    answer:
+      "A histeroscopia é a colocação de 'câmera' no interior do útero. Da mesma maneira que a laparoscopia, ela pode ser cirúrgica ou diagnóstica. Com este procedimento podemos avaliar o interior do útero e corrigir possíveis alterações.",
+  },
+  {
+    question:
+      "Reversão de Vasectomia: qual a técnica utilizada no procedimento?",
+    answer:
+      "A reversão de vasectomia consiste em um procedimento cirúrgico realizado através de uma pequena abertura da bolsa testicular. Com auxílio de microscópio, é feito o realinhamento do canal (deferente) ligado na vasectomia. A anestesia aplicada é por meio de bloqueio raquidiano e o paciente tem alta no mesmo dia. Este método não submete a mulher a nenhum tratamento. As chances de gravidez múltipla diminuem e as de ocorrer uma concepção naturalmente aumentam.",
+  },
+  {
+    question: "Casais Homoafetivos: como é feito o tratamento?",
+    answer:
+      "No caso de mulheres homossexuais, não se pode utilizar o sêmen de um familiar ou conhecido de uma das parceiras para fertilizar os óvulos de sua companheira por meio da inseminação artificial ou fertilização in vitro. Os doadores não devem conhecer a identidade dos receptores e vice-versa e, obrigatoriamente, é mantido o anonimato. Em situações especiais, as informações sobre doadores, por motivação de saúde, podem ser fornecidas exclusivamente para médicos, resguardando-se sua identidade civil.\nJá os homens homoafetivos dependem dos óvulos de doadora desconhecida e a gestação do útero que, ao contrário dos óvulos doados, deve ser de parente até segundo grau, como irmã ou mãe. É obrigatório que a chamada 'barriga solidária' tenha a aprovação do Conselho Federal de Medicina. Em outros países é possível pagar a uma mulher pelo ‘aluguel’ do seu útero ou pelos seus óvulos, ao contrário no Brasil, onde essa alternativa é proibida.",
+  },
+  {
+    question: "Barriga de Aluguel: como é feito?",
+    answer:
+      "Consiste em uma alternativa de tratamento para mulheres que não podem engravidar, por não ter útero ou pela presença de doenças graves que contraindiquem a gravidez, mesmo tendo óvulos capazes de gerar um bebê. Refere-se também à única alternativa de tratamento para casais de homens homoafetivos.\nPara a realização da barriga de aluguel, o casal gera o embrião através de técnica de fertilização in vitro (FIV) que, em seguida, é transferido para o útero de outra mulher, que após nove meses dá a luz. Após o nascimento, o bebê é devolvido aos pais biológicos.\nO termo 'barriga de aluguel', apesar de muito utilizado, é inadequado, pois implica uma relação comercial que não é permitida em nosso país. No Brasil, denominamos 'gestação de substituição' ou 'doação temporária do útero'.\nA resolução do Conselho Federal de Medicina (1.957/10) determina que as doadoras temporárias do útero devam ser parentes de até segundo grau (mãe, filha, irmã, avó ou neta da doadora genética – mãe biológica). Os demais casos devem ser autorizados pelo Conselho Regional de Medicina. A doação temporária do útero não deve ter caráter lucrativo ou comercial.",
+  },
+  {
+    question: "Banco de Sêmen: como é feito?",
+    answer:
+      "Os doadores de sêmen devem ter entre 18 e 45 anos e não ter doenças infecciosas ou genéticas. O voluntário realiza uma série de exames, como testes no aparelho reprodutor – que detectam doenças infectocontagiosas e DSTs (Doenças Sexualmente Transmissíveis) –, exames de sangue – que apontam possíveis doenças hereditárias – e o espermograma – que define a qualidade de seu esperma.\nApós todos os exames, o voluntário é encaminhado a uma sala reservada, onde realiza a coleta de sêmen. Em seguida ele passa por uma espécie de triagem com um urologista e responde a um questionário referente a doenças e questões pessoais.\nNormalmente os bancos selecionam grupos de homens jovens e com potencial reprodutivo comprovado para realizarem a doação, que deve ser feita sem benefícios financeiros entre as partes e com a assinatura de um termo de doação, que consiste em abrir mão de qualquer direito sobre o sêmen.",
+  },
+  {
+    question:
+      "Criopreservação de Esperma e Óvulos: como é feito o tratamento para preservação da fertilidade?",
+    answer:
+      "Utilizado para a preservação da fertilidade da mulher, o congelamento de óvulos pode ser feito em diversas situações, desde o adiamento da maternidade por motivos pessoais, até em casos de tratamentos oncológicos, que podem causar danos irreversíveis aos ovários.\nOs óvulos habitualmente são obtidos por estimulação hormonal. A estimulação ovariana é realizada em cerca de 10 dias com injeções diárias de gonadotrofinas a partir dos três primeiros dias do ciclo menstrual. Em seguida, os óvulos são coletados e criopreservados (congelados).\nO congelamento de espermatozoides tem as seguintes indicações: pacientes que farão uma vasectomia, que passarão por tratamento oncológico ou que estarão ausentes quando a mulher fizer a fertilização in vitro. A coleta do espermatozoide é feita na clínica por masturbação, biópsia ou microdissecção testicular. O espermatozoide é tratado em laboratório e preservado em nitrogênio líquido, a -196ºC.",
+  },
+  {
+    question:
+      "Tratamentos de pacientes de outros Estados: como é feito o acompanhamento?",
+    answer:
+      "O Centro de Reprodução Humana Santa Joana procura organizar todas as etapas do tratamento de modo a diminuir o desgaste das idas e vindas constantes do paciente a São Paulo. A partir da busca de parceiros nas cidades de origem, estes participam de parte dos tratamentos, seja na realização de exames ou no fornecimento de medicações, de acordo com cada caso.",
   },
 ];

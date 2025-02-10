@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { medicalTeam } from "@/lib/utils";
+import { firstDoctorLattes, medicalTeam } from "@/lib/utils";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper as SwiperCore } from "swiper";
@@ -47,7 +47,7 @@ export const MobileTeamCard = () => {
           Coordenadora
         </span>
 
-        <p className="flex items-center gap-2 text-blue-normal font-bold text-sm focus:ring-0 focus:outline-none pt-0">
+        <p className="flex items-center gap-2 text-blue-normal font-bold text-[11px] focus:ring-0 focus:outline-none pt-0">
           SAIBA MAIS ABAIXO:
         </p>
 
@@ -76,19 +76,17 @@ export const MobileTeamCard = () => {
                 INSTAGRAM
               </Link>
             </div>
+
             <CollapsibleContent className="text-xs font-normal text-gray-title mt-2 leading-5">
-              Revisora da revista científica Human Reproduction Archives (SBRH);
-              Editora associada da revista internacional Minerva Ginecológic;
-              Professora convidada UNIFESP para graduação desde 2010; Doutora em
-              Reprodução Humana pela Universidade Federal de São Paulo
-              (UNIFESP/EPM); Residência Médica em Reprodução Humana pela Escola
-              Paulista de Medicina – Universidade Federal de São Paulo
-              (UNIFESP/EPM); Título de Especialista em Ginecologia e Obstetrícia
-              pela Federação Brasileira das Associações de Ginecologia e
-              Obstetrícia (FEBRASGO); Residência Médica em Obstetrícia e
-              Ginecologia pela Escola Paulista de Medicina (UNIFESP/EPM); Médica
-              formada pela Unesp – Faculdade de Ciências Médicas Júlio de
-              Mesquita Filho.
+              <div className="border-b border-gray-200 mb-3 mt-5" />
+              {firstDoctorLattes.map((item, index) => (
+                <p
+                  key={index}
+                  className="text-xs text-gray-title font-normal leading-5"
+                >
+                  {item}
+                </p>
+              ))}
             </CollapsibleContent>
           </Collapsible>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -16,11 +16,12 @@ interface DoctorCardProps {
   resume: string;
   rqe?: string;
   video?: string;
-  lattes?: string;
+  lattes?: string[];
   insta?: string;
 }
 
 export const MobileDoctorCard = (doctor: DoctorCardProps) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="w-full flex flex-col border border-gray-light rounded-sm">
       <div className="relative h-[203px] overflow-hidden">
@@ -54,19 +55,31 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
 
         {doctor.lattes && (
           <>
-            <div className="border-b border-gray-light" />
-            <p className="flex items-center gap-2 text-blue-normal font-bold text-sm focus:ring-0 focus:outline-none pt-0">
+            <div
+              className={cn("border-b border-gray-light", isOpen && "hidden")}
+            />
+            <p
+              className={cn(
+                "flex items-center gap-2 text-blue-normal font-bold text-[11px] focus:ring-0 focus:outline-none pt-0",
+                isOpen && "hidden"
+              )}
+            >
               SAIBA MAIS ABAIXO:
             </p>
           </>
         )}
 
         <div className="flex w-full gap-2">
-          <Collapsible>
+          <Collapsible onOpenChange={(open) => setIsOpen(open)}>
             <div className="flex gap-2">
               {doctor.lattes && (
                 <CollapsibleTrigger>
-                  <span className="text-xs font-medium text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
+                  <span
+                    className={cn(
+                      "text-xs font-medium text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal",
+                      isOpen && "bg-blue-normal bg-opacity-10 text-blue-normal"
+                    )}
+                  >
                     LATTES
                   </span>
                 </CollapsibleTrigger>
@@ -91,8 +104,24 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
               )}
             </div>
             {doctor.lattes && (
-              <CollapsibleContent className="text-xs font-normal text-gray-title mt-3 leading-5">
-                {doctor.lattes}
+              <CollapsibleContent>
+                <div
+                  className={cn(
+                    "hidden",
+                    isOpen && "block border-b border-gray-light mt-3"
+                  )}
+                />
+
+                <ul className="list-inside mt-3">
+                  {doctor.lattes.map((item, index) => (
+                    <li
+                      key={index}
+                      className="text-xs font-normal text-gray-title leading-5"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </CollapsibleContent>
             )}
           </Collapsible>
@@ -144,72 +173,85 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
         )}
 
         <Popover>
-          <PopoverContent className="w-80 max-w-md p-7 text-start border border-gray-default rounded-md">
+          <PopoverContent className="w-[984] p-7 text-start border border-gray-default rounded-md">
             <PopoverClose
-              className="absolute top-2 right-4 text-gray-title hover:text-bloack focus:ring-0 focus:outline-none cursor-pointer"
+              className="absolute top-6 right-7 text-gray-title hover:text-bloack focus:ring-0 focus:outline-none cursor-pointer"
               aria-label="Fechar"
             >
               ✕
             </PopoverClose>
 
-            <div className="flex flex-col gap-2">
-              <div className="relative w-full h-64 overflow-hidden">
-                <Image
-                  src={doctor.picture}
-                  alt="Foto Médico"
-                  fill
-                  loading="lazy"
-                  className="rounded-md object-cover object-top"
-                />
-              </div>
+            <div className="flex flex-col gap-3 w-full">
+              <div className="flex w-full px-12 gap-14">
+                <div className="w-1/3 h-44 my-2 mx-auto">
+                  <Image
+                    src={doctor.picture}
+                    alt="Foto Médico"
+                    width={500}
+                    height={300}
+                    loading="lazy"
+                    className="rounded-md object-cover"
+                  />
+                </div>
 
-              <h5 className="text-gray-title font-semibold text-sm w-4/5 uppercase">
-                {doctor.name}
-              </h5>
+                <div className="space-y-3 w-2/3 mt-2">
+                  <h5 className="text-gray-title font-bold text-2xl uppercase">
+                    {doctor.name}
+                  </h5>
 
-              <span className="text-sm text-gray-title font-normal">
-                {doctor.resume}
-              </span>
-
-              <p className="flex w-full text-xs text-gray-default font-normal gap-5">
-                {doctor.register && doctor.register}
-                <span>{doctor.rqe && doctor.rqe}</span>
-              </p>
-
-              <div className="flex w-full gap-2">
-                {doctor.lattes && (
-                  <span className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
-                    LATTES
-                  </span>
-                )}
-
-                {doctor.video && (
-                  <Link
-                    className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
-                    href={doctor.video}
-                    target="_blank"
-                  >
-                    VÍDEO
-                  </Link>
-                )}
-
-                {doctor.insta && (
-                  <Link
-                    className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
-                    href={doctor.insta}
-                    target="_blank"
-                  >
-                    INSTAGRAM
-                  </Link>
-                )}
-              </div>
-
-              {doctor.lattes && (
-                <div className="mt-2">
-                  <div className="border-b border-gray-200 mb-4" />
-                  <p className="text-xs text-gray-title font-normal leading-5">
-                    {doctor.lattes}
+                  <p className="text-base text-gray-title font-normal">
+                    {doctor.resume}
                   </p>
+
+                  <span className="flex text-base text-gray-title font-normal mt-1">
+                    {doctor.register && doctor.register}
+                    <span>{doctor.rqe && doctor.rqe}</span>
+                  </span>
+
+                  <p className="flex items-center gap-2 text-blue-normal font-bold text-[11px] leading-3 focus:ring-0 focus:outline-none pt-0">
+                    SAIBA MAIS ABAIXO:
+                  </p>
+
+                  <div className="flex w-full gap-2">
+                    {doctor.lattes && (
+                      <span className="text-xxs font-normal p-2 rounded-sm underline bg-blue-normal bg-opacity-10 text-blue-normal">
+                        LATTES
+                      </span>
+                    )}
+
+                    {doctor.video && (
+                      <Link
+                        className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                        href={doctor.video}
+                        target="_blank"
+                      >
+                        VÍDEO
+                      </Link>
+                    )}
+
+                    {doctor.insta && (
+                      <Link
+                        className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                        href={doctor.insta}
+                        target="_blank"
+                      >
+                        INSTAGRAM
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </div>
+              {doctor.lattes && (
+                <div className="mt-2 px-12">
+                  <div className="border-b border-gray-200 mb-4" />
+                  {doctor.lattes.map((item, index) => (
+                    <p
+                      key={index}
+                      className="text-xs text-gray-title font-normal leading-5"
+                    >
+                      {item}
+                    </p>
+                  ))}
                 </div>
               )}
             </div>
