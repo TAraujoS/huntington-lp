@@ -21,7 +21,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="flex flex-col bg-blue-extralight px-8 py-10 lg:px-20 lg:py-14">
+    <footer className="flex flex-col bg-blue-extralight px-6 py-10 lg:px-20 lg:py-14">
       <Image
         src="../assets/icons/logo.svg"
         alt="Logo"
@@ -83,14 +83,14 @@ export const Footer = () => {
               href="https://www.instagram.com/profivmedicinareprodutiva/"
               target="_blank"
             >
-              <div className="flex gap-3">
+              <div className="flex gap-2">
                 <Image
                   src="./assets/icons/instagram.svg"
                   alt="Instagram"
                   width={24}
                   height={24}
                 />
-                <span className="text-sm font-normal text-gray-neutral">
+                <span className="text-xs font-normal text-gray-neutral">
                   @profivmedicinareprodutiva
                 </span>
               </div>

@@ -89,20 +89,19 @@ export const ProceduresSection = () => {
                     swiperRef.current?.slideToLoop(index, 0);
                   }}
                   className={cn(
-                    "flex w-11/12 md:w-10/12 h-20 border p-2 px-5 ml-3 rounded-md cursor-pointer bg-ligthBg items-center justify-center",
+                    "flex w-11/12 md:w-10/12 h-20 border p-2 px-5 ml-3 rounded-md cursor-pointer bg-ligthBg items-center justify-center gap-2",
                     activeSlide === index
                       ? borderClasses[slide.border]
                       : "border-gray-default"
                   )}
                 >
-                  <div className="w-full">
-                    <Image
-                      src={slide.icon}
-                      alt={`Icone ${slide.title}`}
-                      width={50}
-                      height={50}
-                    />
-                  </div>
+                  <Image
+                    src={slide.icon}
+                    alt={`Icone ${slide.title}`}
+                    width={40}
+                    height={40}
+                  />
+
                   <p className="text-gray-neutral font-semibold text-xs">
                     {slide.title}
                   </p>
@@ -118,20 +117,19 @@ export const ProceduresSection = () => {
               key={index}
               onClick={() => setActiveSlide(index)}
               className={cn(
-                "flex w-1/5 h-20 border p-2 px-6 rounded-md bg-ligthBg items-center justify-center cursor-pointer",
+                "flex w-1/5 h-20 max-w-[194px] border p-2 px-6 rounded-md bg-ligthBg items-center justify-center cursor-pointer gap-2",
                 activeSlide === index
                   ? borderClasses[slide.border]
                   : "border-gray-default"
               )}
             >
-              <div className="w-full">
-                <Image
-                  src={slide.icon}
-                  alt={`Icone ${slide.title}`}
-                  width={50}
-                  height={50}
-                />
-              </div>
+              <Image
+                src={slide.icon}
+                alt={`Icone ${slide.title}`}
+                width={40}
+                height={40}
+              />
+
               <p className="text-gray-neutral font-semibold text-xs">
                 {slide.title}
               </p>
@@ -191,9 +189,9 @@ export const ProceduresSection = () => {
               </div>
 
               <div className="lg:w-1/2">
-                <h4 className="text-gray-neutral font-semibold text-sm lg:text-base">
+                <h3 className="text-gray-neutral font-semibold text-sm lg:text-base">
                   {slide.title}
-                </h4>
+                </h3>
 
                 <div className="text-sm font-normal text-gray-neutral leading-6 mt-3 hidden md:block">
                   {slide.content.map((paragraph, index) => (
