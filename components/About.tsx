@@ -35,7 +35,7 @@ export const About = () => {
 
         <div className="flex lg:hidden my-8 justify-center">
           <Image
-            src="/assets/about.png"
+            src="/assets/about.svg"
             alt="Imagem Quarto"
             width={500}
             height={500}

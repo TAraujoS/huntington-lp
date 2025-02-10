@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -15,6 +15,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const InfertilitySection = () => {
   const swiperRef = useRef<SwiperCore | null>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const femaleFactors = [
     "Idade Avançada",
     "Endometriose",
@@ -31,6 +33,25 @@ export const InfertilitySection = () => {
     "Maus Hábitos (drogas e anabolizantes)",
   ];
 
+  const showPaginationButtons = () => {
+    const buttons = [];
+    for (let i = 0; i < 3; i++) {
+      buttons.push(
+        <button
+          key={i}
+          className={`w-2 h-2 rounded-full ${
+            activeSlide === i
+              ? "bg-blue-normal"
+              : "bg-gray-light hover:bg-gray-default"
+          }`}
+          onClick={() => swiperRef.current?.slideTo(i)}
+          aria-label={`Slide ${i + 1}`}
+        />
+      );
+    }
+
+    return buttons;
+  };
   return (
     <section
       id="infertilidade"
@@ -126,56 +147,60 @@ export const InfertilitySection = () => {
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
           slidesPerView={1}
           loop={true}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
+          onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
           className="middle-swiper"
         >
           <SwiperSlide>
-            <div className="flex w-full bg-magenta-background text-magenta-text items-center p-4 gap-2 mb-10 md:p-6 md:gap-4">
+            <div className="flex w-full bg-magenta-background text-magenta-text items-center p-4 gap-2 md:p-6 md:gap-4 min-h-[100px]">
               <Image
                 src="/assets/icons/woman-icon.svg"
-                alt="Icone"
+                alt="Icone de mulher"
                 width={20}
                 height={20}
               />
               <span className="font-semibold text-2xl">40%</span>
-              <p className="font-normal text-xs">
+              <p className="font-normal text-xs flex-1">
                 dos casos de infertilidade são relacionados a fatores femininos,
                 como idade, endometriose, menopausa precoce, entre outros.
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex w-full bg-blue-normal bg-opacity-10 text-blue-normal items-center p-4 gap-2 mt-2 md:p-6 md:gap-4">
+            <div className="flex w-full bg-blue-normal bg-opacity-10 text-blue-normal items-center p-4 gap-2 md:p-6 md:gap-4 min-h-[100px]">
               <Image
                 src="/assets/icons/men-icon.svg"
-                alt="Icone"
+                alt="Icone de homem"
                 width={16}
                 height={16}
               />
               <span className="font-semibold text-2xl">40%</span>
-              <p className="font-normal text-xs">
-                das causas estão nos homem, como varicocele e azoospermia.
+              <p className="font-normal text-xs flex-1">
+                das causas estão nos homens, como varicocele e azoospermia.
               </p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="flex w-full bg-purple bg-opacity-10 text-purple items-center p-4 gap-2 mt-2 md:p-6 md:gap-4">
+            <div className="flex w-full bg-purple bg-opacity-10 text-purple items-center p-4 gap-2 md:p-6 md:gap-4 min-h-[100px]">
               <Image
                 src="/assets/icons/couple-icon.svg"
-                alt="Icone"
+                alt="Icone de casal"
                 width={32}
                 height={32}
               />
               <span className="font-semibold text-2xl">20%</span>
-              <p className="font-normal text-xs">
-                das causas estão nos homem, como varicocele e azoospermia.
+              <p className="font-normal text-xs flex-1">
+                das causas estão nos homens, como varicocele e azoospermia.
               </p>
             </div>
           </SwiperSlide>
         </Swiper>
+
+        <div className="flex justify-center mt-3 mb-6 space-x-2">
+          {showPaginationButtons()}
+        </div>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8 mt-4">

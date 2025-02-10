@@ -87,7 +87,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
         <div className="border-b border-gray-200 py-4">
           <Link
             href="#sobre-nos"
-            className="block text-gray-neutral font-bold text-xs hover:text-primary"
+            className="block text-gray-neutral font-bold text-xs hover:text-blue-normal"
             onClick={() => {
               onClose();
               handleNavigation("#sobre-nos");
@@ -100,7 +100,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
         <div className="border-b border-gray-200 py-4">
           <Link
             href="#infertilidade"
-            className="block text-gray-neutral font-bold text-xs hover:text-primary"
+            className="block text-gray-neutral font-bold text-xs hover:text-blue-normal"
             onClick={() => {
               onClose();
               handleNavigation("#infertilidade");
@@ -112,7 +112,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
 
         <Accordion type="single" collapsible className="-pt-4">
           <AccordionItem value="procedimentos">
-            <AccordionTrigger className="text-gray-neutral font-bold text-xs hover:no-underline focus:ring-0 focus:outline-none data-[state=open]:text-blue-normal">
+            <AccordionTrigger className="text-gray-neutral font-bold text-xs hover:no-underline hover:text-blue-normal focus:ring-0 focus:outline-none data-[state=open]:text-blue-normal">
               PROCEDIMENTOS
             </AccordionTrigger>
             <AccordionContent>
@@ -124,7 +124,7 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
                     onClose();
                     handleNavigation("#procedimentos");
                   }}
-                  className="block text-gray-neutral font-normal text-xs hover:text-primary py-2"
+                  className="block text-gray-neutral font-normal text-xs hover:text-blue-normal py-2"
                 >
                   {item}
                 </Link>
@@ -136,13 +136,26 @@ export const MenuMobile = ({ isOpen, onClose }: MenuMobileProps) => {
         <div className="border-b border-gray-200 py-4">
           <Link
             href="#equipe"
-            className="block text-gray-neutral font-bold text-xs hover:text-primarypy-2"
+            className="block text-gray-neutral font-bold text-xs hover:text-blue-normal"
             onClick={() => {
               onClose();
               handleNavigation("#equipe");
             }}
           >
             EQUIPE
+          </Link>
+        </div>
+
+        <div className="border-b border-gray-200 py-4">
+          <Link
+            href="/duvidas-frequentes"
+            className="block text-gray-neutral font-bold text-xs hover:text-blue-normal"
+            onClick={() => {
+              onClose();
+              handleNavigation("/duvidas-frequentes");
+            }}
+          >
+            DÚVIDAS FREQUENTES
           </Link>
         </div>
 
