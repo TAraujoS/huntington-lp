@@ -40,9 +40,9 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
           doctor.lattes ? "p-6" : "p-6 pb-2"
         )}
       >
-        <h5 className="text-gray-title font-semibold text-sm w-4/5 uppercase">
+        <h3 className="text-gray-title font-semibold text-sm w-4/5 uppercase">
           {doctor.name}
-        </h5>
+        </h3>
 
         <span className="text-sm text-gray-title font-normal">
           {doctor.resume}
@@ -150,9 +150,9 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
           doctor.lattes ? "p-4" : "p-4 pb-2"
         )}
       >
-        <h5 className="text-gray-title font-semibold text-xs w-4/5 uppercase">
+        <h3 className="text-gray-title font-semibold text-xs w-4/5 uppercase">
           {doctor.name}
-        </h5>
+        </h3>
 
         <span className="text-[11px] text-gray-title font-normal">
           {doctor.resume}
@@ -195,9 +195,9 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
                 </div>
 
                 <div className="space-y-3 w-2/3 mt-2">
-                  <h5 className="text-gray-title font-bold text-2xl uppercase">
+                  <h3 className="text-gray-title font-bold text-2xl uppercase">
                     {doctor.name}
-                  </h5>
+                  </h3>
 
                   <p className="text-base text-gray-title font-normal">
                     {doctor.resume}

@@ -12,11 +12,13 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "Huntington: Centro de Reprodução Humana",
-  description: "Centro de Reprodução Humana",
+  title: "Infertilidade Feminina: Tratamento Especializado | ProFIV",
+  description:
+    "Encontre na ProFIV as melhores soluções para infertilidade feminina! Tratamentos inovadores para transformar seu sonho em realidade. Agende sua consulta!",
   icons: {
     icon: "/favicon.ico",
   },
+  keywords: "infertilidade feminina",
 };
 
 export default function RootLayout({

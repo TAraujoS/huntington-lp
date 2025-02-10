@@ -28,9 +28,9 @@ export const DesktopTeamCard = () => {
         </div>
 
         <div className="space-y-3 w-2/3 mt-2">
-          <h5 className="text-gray-title font-bold text-2xl uppercase">
+          <h3 className="text-gray-title font-bold text-2xl uppercase">
             DRA. Thais Sanches Domingues Cury
-          </h5>
+          </h3>
 
           <p className="text-base text-gray-title font-normal">
             CRM-SP 104.252 | RQE/RA 97.7111
@@ -67,9 +67,9 @@ export const DesktopTeamCard = () => {
                   </div>
 
                   <div className="space-y-3 w-2/3 mt-2">
-                    <h5 className="text-gray-title font-bold text-2xl uppercase">
+                    <h3 className="text-gray-title font-bold text-2xl uppercase">
                       DRA. Thais Sanches Domingues Cury
-                    </h5>
+                    </h3>
 
                     <p className="text-base text-gray-title font-normal">
                       CRM-SP 104.252 | RQE/RA 97.7111
