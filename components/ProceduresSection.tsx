@@ -41,7 +41,7 @@ export const ProceduresSection = () => {
   return (
     <section
       id="procedimentos"
-      className="bg-light pt-10 pb-8 flex flex-col items-center max-h-[810px]"
+      className="bg-light pt-10 flex flex-col items-center xl:max-h-[810px] lg:max-h-[900px] md:max-h-[980px]"
     >
       <h2 className="text-blue-normal text-xl lg:text-2xl font-semibold">
         PROCEDIMENTOS
@@ -260,7 +260,7 @@ export const ProceduresSection = () => {
             </div>
             <div
               className={cn(
-                "flex justify-start lg:justify-center self-start lg:self-center pl-10 md:pl-6 lg:pl-0 mt-6 lg:mt-0",
+                "flex justify-start lg:justify-center self-start lg:self-center pl-10 pb-6 md:pl-6 lg:pl-0 mt-6 lg:mt-0",
                 index !== 0 && "lg:mt-8"
               )}
             >

@@ -156,7 +156,7 @@ export const DesktopTeamCard = () => {
                   <DialogTitle></DialogTitle>
                   <iframe
                     width="100%"
-                    height="415"
+                    height="315"
                     src="https://www.youtube.com/embed/bskhBCG36CE"
                     title="YouTube video"
                     allowFullScreen
