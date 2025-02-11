@@ -102,7 +102,7 @@ export const medicalTeam = [
     rqe: "RQE: 436.811",
     resume:
       "Especialidade em Reproduçãoa Assistida e Corresponsável pelo ProFIV",
-    video: "https://youtu.be/MuQ60KX_AlU",
+    video: "https://www.youtube.com/embed/MuQ60KX_AlU",
     lattes: [
       "Fundador da Huntington;",
       "Corresponsável pelo Centro de Reprodução Humana Santa Joana;",
@@ -134,7 +134,7 @@ export const medicalTeam = [
     register: "CRM: 129.735",
     rqe: "RQE: 55.654",
     resume: "Especialidade em Urologista",
-    video: "https://youtu.be/Jj0XvSKEnhM",
+    video: "https://www.youtube.com/embed/Jj0XvSKEnhM",
     insta: "https://www.instagram.com/drguilhermewood/",
     lattes: [
       "Fellowship em urologia e andrologia pelo Massachusetts General Hospital Harvard University – Boston-EUA;",

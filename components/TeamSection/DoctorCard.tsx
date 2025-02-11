@@ -9,6 +9,12 @@ import {
 } from "../ui/collapsible";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { PopoverClose } from "@radix-ui/react-popover";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
 interface DoctorCardProps {
   name: string;
   picture: string;
@@ -22,6 +28,8 @@ interface DoctorCardProps {
 
 export const MobileDoctorCard = (doctor: DoctorCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <div className="w-full flex flex-col border border-gray-light rounded-sm">
       <div className="relative h-[203px] overflow-hidden">
@@ -76,7 +84,7 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
                 <CollapsibleTrigger>
                   <span
                     className={cn(
-                      "text-xs font-medium text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal",
+                      "text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal",
                       isOpen && "bg-blue-normal bg-opacity-10 text-blue-normal"
                     )}
                   >
@@ -85,17 +93,28 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
                 </CollapsibleTrigger>
               )}
               {doctor.video && (
-                <Link
-                  className="text-xs font-medium text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
-                  href={doctor.video}
-                  target="_blank"
-                >
-                  VÍDEO
-                </Link>
+                <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                  <DialogTrigger asChild>
+                    <span className="text-xs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
+                      VÍDEO
+                    </span>
+                  </DialogTrigger>
+
+                  <DialogContent className="max-w-xl w-full p-4">
+                    <DialogTitle></DialogTitle>
+                    <iframe
+                      width="100%"
+                      height="315"
+                      src={doctor.video}
+                      title="YouTube video"
+                      allowFullScreen
+                    ></iframe>
+                  </DialogContent>
+                </Dialog>
               )}
               {doctor.insta && (
                 <Link
-                  className="text-xs font-medium text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                  className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
                   href={doctor.insta}
                   target="_blank"
                 >
@@ -132,6 +151,8 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
 };
 
 export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <>
       <div className="relative h-[150px] w-full overflow-hidden">
@@ -214,24 +235,35 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
 
                   <div className="flex w-full gap-2">
                     {doctor.lattes && (
-                      <span className="text-xxs font-normal p-2 rounded-sm underline bg-blue-normal bg-opacity-10 text-blue-normal">
+                      <span className="text-xxs font-bold p-2 rounded-sm underline bg-blue-normal bg-opacity-10 text-blue-normal">
                         LATTES
                       </span>
                     )}
 
                     {doctor.video && (
-                      <Link
-                        className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
-                        href={doctor.video}
-                        target="_blank"
-                      >
-                        VÍDEO
-                      </Link>
+                      <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                        <DialogTrigger asChild>
+                          <span className="text-xxs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
+                            VÍDEO
+                          </span>
+                        </DialogTrigger>
+
+                        <DialogContent className="max-w-xl w-full p-4">
+                          <DialogTitle></DialogTitle>
+                          <iframe
+                            width="100%"
+                            height="315"
+                            src={doctor.video}
+                            title="YouTube video"
+                            allowFullScreen
+                          ></iframe>
+                        </DialogContent>
+                      </Dialog>
                     )}
 
                     {doctor.insta && (
                       <Link
-                        className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                        className="text-xxs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
                         href={doctor.insta}
                         target="_blank"
                       >
@@ -260,25 +292,36 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
           <div className="flex w-full gap-2">
             {doctor.lattes && (
               <PopoverTrigger asChild>
-                <span className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal cursor-pointer">
+                <span className="text-xxs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal cursor-pointer">
                   LATTES
                 </span>
               </PopoverTrigger>
             )}
 
             {doctor.video && (
-              <Link
-                className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
-                href={doctor.video}
-                target="_blank"
-              >
-                VÍDEO
-              </Link>
+              <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                <DialogTrigger asChild>
+                  <span className="text-xxs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
+                    VÍDEO
+                  </span>
+                </DialogTrigger>
+
+                <DialogContent className="max-w-xl w-full p-4">
+                  <DialogTitle></DialogTitle>
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src={doctor.video}
+                    title="YouTube video"
+                    allowFullScreen
+                  ></iframe>
+                </DialogContent>
+              </Dialog>
             )}
 
             {doctor.insta && (
               <Link
-                className="text-xxs font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                className="text-xxs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
                 href={doctor.insta}
                 target="_blank"
               >

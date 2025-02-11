@@ -6,8 +6,16 @@ import { cn, firstDoctorLattes, medicalTeam } from "@/lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { PopoverClose } from "@radix-ui/react-popover";
 import { DesktopDoctorCard } from "./DoctorCard";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
+import { useState } from "react";
 
 export const DesktopTeamCard = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const firstTeam = medicalTeam.slice(0, 4);
   const secondTeam = medicalTeam
     .slice(4, 6)
@@ -84,20 +92,31 @@ export const DesktopTeamCard = () => {
                     </p>
 
                     <div className="flex w-full gap-2">
-                      <span className="text-xs font-normal p-3 rounded-sm underline bg-blue-normal bg-opacity-10 text-blue-normal">
+                      <span className="text-xs font-medium p-2 rounded-sm underline bg-blue-normal bg-opacity-10 text-blue-normal">
                         LATTES
                       </span>
 
-                      <Link
-                        className="text-xs font-normal text-gray-title bg-light p-3 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
-                        href="https://youtu.be/bskhBCG36CE"
-                        target="_blank"
-                      >
-                        VÍDEO
-                      </Link>
+                      <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                        <DialogTrigger asChild>
+                          <span className="text-xs font-medium content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
+                            VÍDEO
+                          </span>
+                        </DialogTrigger>
+
+                        <DialogContent className="max-w-xl w-full p-4">
+                          <DialogTitle></DialogTitle>
+                          <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/bskhBCG36CE"
+                            title="YouTube video"
+                            allowFullScreen
+                          ></iframe>
+                        </DialogContent>
+                      </Dialog>
 
                       <Link
-                        className="text-xs font-normal text-gray-title bg-light p-3 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                        className="text-xs font-medium text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
                         href="https://www.instagram.com/thaisdominguescury/"
                         target="_blank"
                       >
@@ -122,21 +141,32 @@ export const DesktopTeamCard = () => {
 
             <div className="flex w-full gap-2">
               <PopoverTrigger asChild>
-                <span className="text-[11px] font-normal text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal cursor-pointer">
+                <span className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal cursor-pointer">
                   LATTES
                 </span>
               </PopoverTrigger>
 
-              <Link
-                className="text-[11px] font-normal text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
-                href="https://youtu.be/bskhBCG36CE"
-                target="_blank"
-              >
-                VÍDEO
-              </Link>
+              <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                <DialogTrigger asChild>
+                  <span className="text-xs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
+                    VÍDEO
+                  </span>
+                </DialogTrigger>
+
+                <DialogContent className="max-w-xl w-full p-4">
+                  <DialogTitle></DialogTitle>
+                  <iframe
+                    width="100%"
+                    height="415"
+                    src="https://www.youtube.com/embed/bskhBCG36CE"
+                    title="YouTube video"
+                    allowFullScreen
+                  ></iframe>
+                </DialogContent>
+              </Dialog>
 
               <Link
-                className="text-[11px] font-normal text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
                 href="https://www.instagram.com/thaisdominguescury/"
                 target="_blank"
               >

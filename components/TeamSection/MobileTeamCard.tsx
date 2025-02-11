@@ -17,10 +17,17 @@ import {
   CollapsibleTrigger,
 } from "../ui/collapsible";
 import { MobileDoctorCard } from "./DoctorCard";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
 
 export const MobileTeamCard = () => {
   const swiperRef = useRef<SwiperCore | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <div className="flex flex-col w-[312px]">
@@ -55,21 +62,32 @@ export const MobileTeamCard = () => {
           <Collapsible>
             <div className="flex gap-2">
               <CollapsibleTrigger>
-                <span className="text-xs font-medium text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
+                <span className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
                   LATTES
                 </span>
               </CollapsibleTrigger>
 
-              <Link
-                className="text-xs font-medium text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
-                href="https://youtu.be/bskhBCG36CE"
-                target="_blank"
-              >
-                VÍDEO
-              </Link>
+              <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                <DialogTrigger asChild>
+                  <span className="text-xs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
+                    VÍDEO
+                  </span>
+                </DialogTrigger>
+
+                <DialogContent className="max-w-xl w-full p-4">
+                  <DialogTitle></DialogTitle>
+                  <iframe
+                    width="100%"
+                    height="415"
+                    src="https://www.youtube.com/embed/bskhBCG36CE"
+                    title="YouTube video"
+                    allowFullScreen
+                  ></iframe>
+                </DialogContent>
+              </Dialog>
 
               <Link
-                className="text-xs font-medium text-gray-title bg-light p-3 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
                 href="https://www.instagram.com/thaisdominguescury/"
                 target="_blank"
               >
