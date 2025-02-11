@@ -3,8 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { cn, firstDoctorLattes, medicalTeam } from "@/lib/utils";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
-import { PopoverClose } from "@radix-ui/react-popover";
 import { DesktopDoctorCard } from "./DoctorCard";
 import {
   Dialog,
@@ -15,6 +13,7 @@ import {
 import { useState } from "react";
 
 export const DesktopTeamCard = () => {
+  const [isDoctorOpen, setIsDoctorOpen] = useState(false);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const firstTeam = medicalTeam.slice(0, 4);
   const secondTeam = medicalTeam
@@ -52,15 +51,9 @@ export const DesktopTeamCard = () => {
             SAIBA MAIS ABAIXO:
           </p>
 
-          <Popover>
-            <PopoverContent className="w-[984px] p-7 text-start border border-gray-default rounded-md">
-              <PopoverClose
-                className="absolute top-6 right-7 text-gray-title hover:text-bloack focus:ring-0 focus:outline-none cursor-pointer"
-                aria-label="Fechar"
-              >
-                ✕
-              </PopoverClose>
-
+          <Dialog open={isDoctorOpen} onOpenChange={setIsDoctorOpen}>
+            <DialogContent className="w-[984px] max-w-none p-7 text-start border border-gray-default rounded-md">
+              <DialogTitle></DialogTitle>
               <div className="flex flex-col gap-3 w-full">
                 <div className="flex w-full px-12 gap-14">
                   <div className="w-1/3 h-44 my-2 mx-auto">
@@ -96,7 +89,13 @@ export const DesktopTeamCard = () => {
                         LATTES
                       </span>
 
-                      <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                      <Dialog
+                        open={isVideoOpen}
+                        onOpenChange={() => {
+                          setIsDoctorOpen(false);
+                          setIsVideoOpen(true);
+                        }}
+                      >
                         <DialogTrigger asChild>
                           <span className="text-xs font-medium content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
                             VÍDEO
@@ -137,14 +136,14 @@ export const DesktopTeamCard = () => {
                   ))}
                 </div>
               </div>
-            </PopoverContent>
+            </DialogContent>
 
             <div className="flex w-full gap-2">
-              <PopoverTrigger asChild>
+              <DialogTrigger asChild>
                 <span className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal cursor-pointer">
                   LATTES
                 </span>
-              </PopoverTrigger>
+              </DialogTrigger>
 
               <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
@@ -173,7 +172,7 @@ export const DesktopTeamCard = () => {
                 INSTAGRAM
               </Link>
             </div>
-          </Popover>
+          </Dialog>
         </div>
       </div>
 

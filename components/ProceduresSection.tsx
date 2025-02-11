@@ -41,7 +41,7 @@ export const ProceduresSection = () => {
   return (
     <section
       id="procedimentos"
-      className="bg-light pt-10 pb-8 flex flex-col items-center"
+      className="bg-light pt-10 pb-8 flex flex-col items-center max-h-[810px]"
     >
       <h2 className="text-blue-normal text-xl lg:text-2xl font-semibold">
         PROCEDIMENTOS

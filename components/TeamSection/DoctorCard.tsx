@@ -7,8 +7,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "../ui/collapsible";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
-import { PopoverClose } from "@radix-ui/react-popover";
+
 import {
   Dialog,
   DialogContent,
@@ -152,6 +151,7 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
 
 export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isDoctorOpen, setIsDoctorOpen] = useState(false);
 
   return (
     <>
@@ -193,15 +193,9 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
           </>
         )}
 
-        <Popover>
-          <PopoverContent className="w-[984] p-7 text-start border border-gray-default rounded-md">
-            <PopoverClose
-              className="absolute top-6 right-7 text-gray-title hover:text-bloack focus:ring-0 focus:outline-none cursor-pointer"
-              aria-label="Fechar"
-            >
-              ✕
-            </PopoverClose>
-
+        <Dialog open={isDoctorOpen} onOpenChange={setIsDoctorOpen}>
+          <DialogContent className="w-[984px] max-w-none p-7 text-start border border-gray-default rounded-md">
+            <DialogTitle></DialogTitle>
             <div className="flex flex-col gap-3 w-full">
               <div className="flex w-full px-12 gap-14">
                 <div className="w-1/3 h-44 my-2 mx-auto">
@@ -241,7 +235,13 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
                     )}
 
                     {doctor.video && (
-                      <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                      <Dialog
+                        open={isVideoOpen}
+                        onOpenChange={() => {
+                          setIsDoctorOpen(false);
+                          setIsVideoOpen(true);
+                        }}
+                      >
                         <DialogTrigger asChild>
                           <span className="text-xxs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
                             VÍDEO
@@ -287,15 +287,15 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
                 </div>
               )}
             </div>
-          </PopoverContent>
+          </DialogContent>
 
           <div className="flex w-full gap-2">
             {doctor.lattes && (
-              <PopoverTrigger asChild>
+              <DialogTrigger asChild>
                 <span className="text-xxs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal cursor-pointer">
                   LATTES
                 </span>
-              </PopoverTrigger>
+              </DialogTrigger>
             )}
 
             {doctor.video && (
@@ -329,7 +329,7 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
               </Link>
             )}
           </div>
-        </Popover>
+        </Dialog>
       </div>
     </>
   );
