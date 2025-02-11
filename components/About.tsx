@@ -72,7 +72,7 @@ export const About = () => {
           >
             <AccordionItem value="about-more" className="border-0">
               <AccordionContent>
-                <p className="text-gray-neutral font-normal text-sm">
+                <p className="text-gray-neutral font-normal text-xs lg:text-base">
                   A atualização profissional da nossa equipe é fundamental para
                   o sucesso de nossos tratamentos. O{" "}
                   <span className="font-bold">ProFIV</span> conta com corpo
@@ -80,7 +80,7 @@ export const About = () => {
                   enfermagem qualificada para acompanhamento de procedimentos de
                   reprodução assistida.
                 </p>
-                <p className="text-gray-neutral font-normal text-sm mt-2">
+                <p className="text-gray-neutral font-normal text-xs lg:text-base mt-2">
                   Investir no aprimoramento de novas técnicas e o
                   desenvolvimento de pesquisas científicas relevantes são
                   práticas constantes que nos revertem à conquista de diversos

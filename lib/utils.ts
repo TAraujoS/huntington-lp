@@ -44,7 +44,8 @@ export const proceduresContent = [
     title: "CONGELAMENTO DE ÓVULOS",
     icon: "/assets/icons/procedure-icon-2.svg",
     content: [
-      "Postergar a gravidez é uma decisão comum entre mulheres que buscam sucesso profissional antes de engravidar. Entretanto, a fertilidade feminina está diretamente ligada à idade. Ao nascer, uma mulher possui cerca de 7 milhões de óvulos, número que diminui significativamente com o passar dos anos, chegando a menos de 25 mil aos 42 anos. Além da quantidade, a qualidade dos óvulos também se deteriora com o tempo devido a fatores ambientais e erros na divisão do material genético. Isso pode dificultar ou até impedir a gestação natural.",
+      "Postergar a gravidez é uma decisão comum entre mulheres que buscam sucesso profissional antes de engravidar. Entretanto, a fertilidade feminina está diretamente ligada à idade.",
+      "Ao nascer, uma mulher possui cerca de 7 milhões de óvulos, número que diminui significativamente com o passar dos anos, chegando a menos de 25 mil aos 42 anos. Além da quantidade, a qualidade dos óvulos também se deteriora com o tempo devido a fatores ambientais e erros na divisão do material genético. Isso pode dificultar ou até impedir a gestação natural.",
       "O congelamento de óvulos é uma opção viável para preservar a fertilidade, especialmente antes dos 35 anos, quando as taxas de gravidez são mais altas. Mulheres que congelam óvulos aos 35 anos mantêm chances semelhantes às de uma mulher dessa idade ao tentar engravidar mais tarde, a partir de embriões formados com os óvulos congelados. Além das chances em si, o congelamento também minimiza os riscos de abortos e condições como a Síndrome de Down, que aumentam com a idade",
       "Quer saber mais? Entre em contato.",
     ],
@@ -55,7 +56,8 @@ export const proceduresContent = [
     title: "INSEMINAÇÃO INTRAUTERINA",
     icon: "/assets/icons/procedure-icon-3.svg",
     content: [
-      "A inseminação intrauterina é um procedimento que consiste na introdução de espermatozoides diretamente no útero da mulher, aumentando as chances de fertilização. É indicada em casos de problemas de ovulação ou quando há dificuldade na mobilidade dos gametas. O processo envolve a coleta de espermatozoides, que são preparados em laboratório para otimizar a concentração e a motilidade. Após a ovulação, os espermatozoides são inseridos no útero, durante um ciclo menstrual monitorado",
+      "A inseminação intrauterina é um procedimento que consiste na introdução de espermatozoides diretamente no útero da mulher, aumentando as chances de fertilização. É indicada em casos de problemas de ovulação ou quando há dificuldade na mobilidade dos gametas.",
+      "O processo envolve a coleta de espermatozoides, que são preparados em laboratório para otimizar a concentração e a motilidade. Após a ovulação, os espermatozoides são inseridos no útero, durante um ciclo menstrual monitorado.",
       "Esse método é menos invasivo que a fertilização in vitro e pode ser realizado com esperma do parceiro ou doador. A inseminação intrauterina é uma opção para casais que desejam aumentar suas chances de concepção, especialmente quando fatores como idade ou condições de saúde afetam a fertilidade. O acompanhamento médico é essencial para determinar o momento ideal e avaliar a resposta ao tratamento, garantindo o melhor resultado possível na busca pela gravidez.",
       "Saiba mais, agende sua consulta.",
     ],
@@ -66,7 +68,8 @@ export const proceduresContent = [
     title: "ONCOFERTILIDADE",
     icon: "/assets/icons/procedure-icon-4.svg",
     content: [
-      "Antes do início de um tratamento oncológico, é fundamental considerar a preservação da fertilidade, pois os quimioterápicos e radioterápicos podem afetar as células reprodutivas, comprometendo a função dos ovários e testículos – em alguns casos, permanentemente. O ProFIV oferece um programa especializado, onde um médico de reprodução assistida avalia cada caso com atenção e pode planejar o melhor método para preservar a fertilidade, como a criopreservação de óvulos ou embriões, garantindo que a saúde do paciente não seja prejudicada",
+      "Antes do início de um tratamento oncológico, é fundamental considerar a preservação da fertilidade, pois os quimioterápicos e radioterápicos podem afetar as células reprodutivas, comprometendo a função dos ovários e testículos – em alguns casos, permanentemente.",
+      "O ProFIV oferece um programa especializado, onde um médico de reprodução assistida avalia cada caso com atenção e pode planejar o melhor método para preservar a fertilidade, como a criopreservação de óvulos ou embriões, garantindo que a saúde do paciente não seja prejudicada.",
       "Atualmente, com os avanços da medicina, a chance de cura de um câncer é muito grande, o que justifica a preocupação com a fertilidade após o tratamento finalizado",
       "Para saber mais, agende sua consulta com um dos nossos especialistas.",
     ],
@@ -77,7 +80,8 @@ export const proceduresContent = [
     title: "OVODOAÇÃO",
     icon: "/assets/icons/procedure-icon-5.png",
     content: [
-      "A ovodoação, ou o tratamento com óvulos doados, é indicada principalmente para mulheres com diminuição da reserva ovariana devido à idade avançada, falência ovariana prematura ou tratamentos oncológicos. Muitas vezes, os casais já enfrentaram dificuldades em tentativas anteriores e recorrem à doação como uma opção viável para engravidar. É importante ressaltar que a idade do óvulo é crucial para o sucesso do tratamento, e no ProFIV são priorizadas doadoras de até 35 anos, o que otimiza as chances de gravidez",
+      "A ovodoação, ou o tratamento com óvulos doados, é indicada principalmente para mulheres com diminuição da reserva ovariana devido à idade avançada, falência ovariana prematura ou tratamentos oncológicos. Muitas vezes, os casais já enfrentaram dificuldades em tentativas anteriores e recorrem à doação como uma opção viável para engravidar.",
+      "É importante ressaltar que a idade do óvulo é crucial para o sucesso do tratamento, e no ProFIV são priorizadas doadoras de até 35 anos, o que otimiza as chances de gravidez.",
       "No nosso programa de ovodoação, a doadora de óvulos passa por um rigoroso protocolo de exames, como sorologias, cariótipo e avaliação do histórico de saúde. Além disso, a identidade tanto da doadora quanto da receptora permanece anônima, garantindo um processo ético e seguro para ambas.",
       "Se quiser saber mais sobre o tratamento com óvulos doados, não deixe de entrar em contato conosco e conversar com um especialista.",
     ],

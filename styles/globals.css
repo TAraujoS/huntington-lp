@@ -79,6 +79,10 @@ html {
   display: none;
 }
 
+section {
+  scroll-margin-top: 80px;
+}
+
 .hero-swiper {
   --swiper-navigation-color: #717171;
   --swiper-navigation-size: 15px;

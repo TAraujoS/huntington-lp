@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { firstDoctorLattes, medicalTeam } from "@/lib/utils";
+import { cn, firstDoctorLattes, medicalTeam } from "@/lib/utils";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper as SwiperCore } from "swiper";
@@ -103,26 +103,29 @@ export const MobileTeamCard = () => {
           className="w-full"
         >
           {medicalTeam.map((doctor, index) => (
-            <SwiperSlide key={index}>
-              <MobileDoctorCard {...doctor} />
+            <SwiperSlide key={index} className="flex flex-col items-center">
+              <div className="min-h-[315px] w-full flex items-center justify-center">
+                <MobileDoctorCard {...doctor} />
+              </div>
+
+              <div className="flex justify-center my-6 space-x-2">
+                {medicalTeam.map((_, i) => (
+                  <button
+                    key={i}
+                    className={cn(
+                      "w-2 h-2 rounded-full",
+                      activeSlide === i
+                        ? "bg-blue-normal"
+                        : "bg-gray-light hover:bg-gray-default"
+                    )}
+                    onClick={() => swiperRef.current?.slideToLoop(i, 0)}
+                    aria-label={`Slide ${i + 1}`}
+                  />
+                ))}
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
-
-      <div className="flex justify-center mt-3 mb-6 space-x-2">
-        {medicalTeam.map((_, index) => (
-          <button
-            key={index}
-            className={`w-2 h-2 rounded-full ${
-              activeSlide === index
-                ? "bg-blue-normal"
-                : "bg-gray-light hover:bg-gray-default"
-            }`}
-            onClick={() => swiperRef.current?.slideTo(index)}
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
       </div>
     </div>
   );

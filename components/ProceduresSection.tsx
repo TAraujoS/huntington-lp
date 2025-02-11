@@ -27,7 +27,7 @@ export const ProceduresSection = () => {
   const swiperRef = useRef<SwiperCore | null>(null);
   const contentSwiperRef = useRef<SwiperCore | null>(null);
 
-  const contentLimit = 545;
+  const contentLimit = 145;
 
   useEffect(() => {
     if (
@@ -143,6 +143,7 @@ export const ProceduresSection = () => {
         onSlideChange={(swiper) => {
           if (swiper.realIndex !== activeSlide) {
             setActiveSlide(swiper.realIndex);
+            setIsOpen(false);
           }
         }}
         onSwiper={(swiper) => (contentSwiperRef.current = swiper)}
@@ -200,7 +201,6 @@ export const ProceduresSection = () => {
                     </p>
                   ))}
                 </div>
-
                 <Collapsible
                   open={isOpen}
                   onOpenChange={setIsOpen}
@@ -208,27 +208,42 @@ export const ProceduresSection = () => {
                 >
                   <div>
                     {slide.content.map((paragraph, index) => {
-                      if (index < 2) {
-                        return (
-                          <p
-                            key={index}
-                            className="text-xs font-normal text-gray-neutral leading-5 mb-[2px]"
-                          >
-                            {index === 1 && paragraph.length > contentLimit
-                              ? `${paragraph.slice(0, contentLimit)}...`
-                              : paragraph}
-                          </p>
-                        );
+                      if (!isOpen) {
+                        if (index === 0) {
+                          return (
+                            <p
+                              key={index}
+                              className="text-xs font-normal text-gray-neutral leading-5 mb-[2px]"
+                            >
+                              {paragraph}
+                            </p>
+                          );
+                        }
+
+                        if (index === 1) {
+                          return (
+                            <p
+                              key={index}
+                              className="text-xs font-normal text-gray-neutral leading-5 mb-[2px]"
+                            >
+                              {paragraph.length > contentLimit
+                                ? `${paragraph.slice(0, contentLimit)}...`
+                                : paragraph}
+                            </p>
+                          );
+                        }
+
+                        return null;
                       }
 
-                      return isOpen ? (
+                      return (
                         <p
                           key={index}
                           className="text-xs font-normal text-gray-neutral leading-5 mb-[2px] last:mt-3"
                         >
                           {paragraph}
                         </p>
-                      ) : null;
+                      );
                     })}
                   </div>
 
@@ -243,17 +258,22 @@ export const ProceduresSection = () => {
                 </Collapsible>
               </div>
             </div>
+            <div
+              className={cn(
+                "flex justify-start lg:justify-center self-start lg:self-center pl-10 md:pl-6 lg:pl-0 mt-6 lg:mt-0",
+                index !== 0 && "lg:mt-8"
+              )}
+            >
+              <Button
+                variant="default"
+                className="bg-blue-normal text-white font-black text-sm hover:bg-blue-dark p-5 w-48"
+              >
+                <Link href="/agendar">AGENDAR CONSULTA</Link>
+              </Button>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex justify-center self-start lg:self-center pl-10 md:pl-6 lg:pl-0 mt-2 lg:mt-0">
-        <Button
-          variant="default"
-          className="bg-blue-normal text-white font-black text-sm hover:bg-blue-dark p-5 w-48"
-        >
-          <Link href="/agendar">AGENDAR CONSULTA</Link>
-        </Button>
-      </div>
     </section>
   );
 };

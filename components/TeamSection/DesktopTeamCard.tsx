@@ -45,7 +45,7 @@ export const DesktopTeamCard = () => {
           </p>
 
           <Popover>
-            <PopoverContent className="w-[984] p-7 text-start border border-gray-default rounded-md">
+            <PopoverContent className="w-[984px] p-7 text-start border border-gray-default rounded-md">
               <PopoverClose
                 className="absolute top-6 right-7 text-gray-title hover:text-bloack focus:ring-0 focus:outline-none cursor-pointer"
                 aria-label="Fechar"
@@ -127,12 +127,21 @@ export const DesktopTeamCard = () => {
                 </span>
               </PopoverTrigger>
 
-              <span className="text-[11px] font-normal text-gray-title bg-light hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal p-2 rounded-sm underline cursor-pointer">
+              <Link
+                className="text-[11px] font-normal text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                href="https://youtu.be/bskhBCG36CE"
+                target="_blank"
+              >
                 VÍDEO
-              </span>
-              <span className="text-[11px] font-normal text-gray-title bg-light hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal p-2 rounded-sm underline cursor-pointer">
+              </Link>
+
+              <Link
+                className="text-[11px] font-normal text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
+                href="https://www.instagram.com/thaisdominguescury/"
+                target="_blank"
+              >
                 INSTAGRAM
-              </span>
+              </Link>
             </div>
           </Popover>
         </div>
