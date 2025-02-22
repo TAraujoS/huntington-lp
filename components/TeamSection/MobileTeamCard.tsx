@@ -17,17 +17,17 @@ import {
   CollapsibleTrigger,
 } from "../ui/collapsible";
 import { MobileDoctorCard } from "./DoctorCard";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from "../ui/dialog";
+// import {
+//   Dialog,
+//   DialogContent,
+//   DialogTitle,
+//   DialogTrigger,
+// } from "../ui/dialog";
 
 export const MobileTeamCard = () => {
   const swiperRef = useRef<SwiperCore | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  // const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <div className="flex flex-col w-[312px]">
@@ -67,7 +67,7 @@ export const MobileTeamCard = () => {
                 </span>
               </CollapsibleTrigger>
 
-              <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+              {/* <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
                   <span className="text-xs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
                     VÍDEO
@@ -84,7 +84,7 @@ export const MobileTeamCard = () => {
                     allowFullScreen
                   ></iframe>
                 </DialogContent>
-              </Dialog>
+              </Dialog> */}
 
               <Link
                 className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"

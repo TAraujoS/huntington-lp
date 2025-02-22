@@ -14,7 +14,7 @@ import { useState } from "react";
 
 export const DesktopTeamCard = () => {
   const [isDoctorOpen, setIsDoctorOpen] = useState(false);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  // const [isVideoOpen, setIsVideoOpen] = useState(false);
   const firstTeam = medicalTeam.slice(0, 4);
   const secondTeam = medicalTeam
     .slice(4, 6)
@@ -89,7 +89,7 @@ export const DesktopTeamCard = () => {
                         LATTES
                       </span>
 
-                      <Dialog
+                      {/* <Dialog
                         open={isVideoOpen}
                         onOpenChange={() => {
                           setIsDoctorOpen(false);
@@ -112,7 +112,7 @@ export const DesktopTeamCard = () => {
                             allowFullScreen
                           ></iframe>
                         </DialogContent>
-                      </Dialog>
+                      </Dialog> */}
 
                       <Link
                         className="text-xs font-medium text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
@@ -145,7 +145,7 @@ export const DesktopTeamCard = () => {
                 </span>
               </DialogTrigger>
 
-              <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+              {/* <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
                   <span className="text-xs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
                     VÍDEO
@@ -162,7 +162,7 @@ export const DesktopTeamCard = () => {
                     allowFullScreen
                   ></iframe>
                 </DialogContent>
-              </Dialog>
+              </Dialog> */}
 
               <Link
                 className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"

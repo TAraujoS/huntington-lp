@@ -27,7 +27,7 @@ interface DoctorCardProps {
 
 export const MobileDoctorCard = (doctor: DoctorCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  // const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
     <div className="w-full flex flex-col border border-gray-light rounded-sm">
@@ -91,7 +91,7 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
                   </span>
                 </CollapsibleTrigger>
               )}
-              {doctor.video && (
+              {/* {doctor.video && (
                 <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                   <DialogTrigger asChild>
                     <span className="text-xs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
@@ -110,7 +110,7 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
                     ></iframe>
                   </DialogContent>
                 </Dialog>
-              )}
+              )} */}
               {doctor.insta && (
                 <Link
                   className="text-xs font-bold text-gray-title bg-light p-2 rounded-sm underline hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal"
@@ -150,7 +150,7 @@ export const MobileDoctorCard = (doctor: DoctorCardProps) => {
 };
 
 export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  // const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isDoctorOpen, setIsDoctorOpen] = useState(false);
 
   return (
@@ -234,7 +234,7 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
                       </span>
                     )}
 
-                    {doctor.video && (
+                    {/* {doctor.video && (
                       <Dialog
                         open={isVideoOpen}
                         onOpenChange={() => {
@@ -259,7 +259,7 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
                           ></iframe>
                         </DialogContent>
                       </Dialog>
-                    )}
+                    )} */}
 
                     {doctor.insta && (
                       <Link
@@ -298,7 +298,7 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
               </DialogTrigger>
             )}
 
-            {doctor.video && (
+            {/* {doctor.video && (
               <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
                 <DialogTrigger asChild>
                   <span className="text-xxs font-bold content-center text-gray-title bg-light p-2 rounded-sm underline cursor-pointer hover:bg-blue-normal hover:bg-opacity-10 hover:text-blue-normal">
@@ -317,7 +317,7 @@ export const DesktopDoctorCard = (doctor: DoctorCardProps) => {
                   ></iframe>
                 </DialogContent>
               </Dialog>
-            )}
+            )} */}
 
             {doctor.insta && (
               <Link
