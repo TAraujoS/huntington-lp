@@ -110,9 +110,11 @@ export const Footer = () => {
           RQE 43681
         </p>
         <div className="mt-6 flex flex-col lg:flex-row justify-between lg:mt-0 lg:w-1/3 gap-4">
-          <p className="text-sm font-semibold text-blue-normal">
-            POLÍTICA DE PRIVACIDADE
-          </p>
+          <Link href="/politicas-privacidade">
+            <p className="text-sm font-semibold text-blue-normal">
+              POLÍTICA DE PRIVACIDADE
+            </p>
+          </Link>
           <Link
             href="https://whistleblowersoftware.com/secure/eugingroup"
             target="_blank"

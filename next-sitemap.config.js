@@ -2,7 +2,7 @@
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.huntington.com",
+  siteUrl: "https://www.profiv.com.br",
   generateRobotsTxt: true,
   outDir: "out",
   generateIndexSitemap: false,
