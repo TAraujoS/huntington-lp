@@ -39,7 +39,7 @@ export default function PrivacyPolicySection() {
         <p className="text-xs lg:text-sm text-gray-neutral leading-6">
           Os dados poderão ser coletados das seguintes formas:
         </p>
-        <ul className="list-disc list-inside space-y-1 text-xs lg:text-sm text-gray-neutral">
+        <ul className="list-[lower-alpha] list-inside space-y-1 text-xs lg:text-sm text-gray-neutral pl-3">
           <li>
             Caso você os forneça, mediante cadastro na plataforma, inscrição em
             nossos produtos e serviços, assinatura de nosso newsletter, responda
@@ -58,7 +58,7 @@ export default function PrivacyPolicySection() {
           O tratamento dos dados pessoais poderá atender às seguintes
           finalidades:
         </p>
-        <ul className="list-disc list-inside space-y-1 text-xs lg:text-sm text-gray-neutral">
+        <ul className="list-disc list-inside space-y-2 text-xs lg:text-sm text-gray-neutral">
           <li>Aprimorar nossos Produtos e Serviços;</li>
           <li>Aprimorar um Conteúdo;</li>
           <li>
@@ -83,6 +83,28 @@ export default function PrivacyPolicySection() {
             testes, pesquisa, desenvolvimento e melhoria do serviço.
           </li>
         </ul>
+
+        <p className="text-xs lg:text-sm text-gray-neutral leading-6">
+          Todas essas operações estarão sempre fundamentadas em alguma das bases
+          legais autorizadoras, quais sejam:
+        </p>
+
+        <ul className="list-[lower-roman] list-inside space-y-2 text-xs lg:text-sm text-gray-neutral pl-3">
+          <li>execução de contrato e procedimentos preliminares;</li>
+          <li>cumprimento das obrigações legais;</li>
+          <li>exercício regular de direitos em processos ou contratos;</li>
+          <li>proteção de crédito;</li>
+          <li>
+            atendimento aos interesses legítimos da Huntington ou de terceiros;
+            ou
+          </li>
+          <li>prevenção de fraudes.</li>
+        </ul>
+
+        <p className="text-xs lg:text-sm text-gray-neutral leading-6">
+          Em outros casos, o tratamento de dados pessoais será condicionado ao
+          consentimento do titular.
+        </p>
       </div>
 
       <div className="space-y-4">
@@ -93,7 +115,10 @@ export default function PrivacyPolicySection() {
           A Huntington não compartilha, vende ou divulga suas informações
           pessoais, exceto conforme descrito nesta Política.
         </p>
-        <ul className="list-disc list-inside space-y-1 text-xs lg:text-sm text-gray-neutral">
+        <p className="text-xs lg:text-sm text-gray-neutral leading-6">
+          Seus dados poderão ser divulgados:
+        </p>
+        <ul className="list-disc list-inside space-y-2 text-xs lg:text-sm text-gray-neutral">
           <li>
             Se a empresa for obrigada a fazê-lo por lei, regulamento ou processo
             legal (como uma ordem judicial ou intimação);
@@ -117,10 +142,10 @@ export default function PrivacyPolicySection() {
         <p className="text-xs lg:text-sm text-gray-neutral leading-6">
           A Huntington manterá os dados pelo tempo que os usuários e visitantes
           possuírem vínculo com a empresa. Após o encerramento desse vínculo, a
-          Huntington poderá continuar a manter os dados em razão das obrigações
-          legais ou do interesse legítimo da empresa, para ajudar a responder
-          demandas legais e/ou auditorias e por outras causas, como combater
-          fraude e responder a solicitações de órgãos regulatórios.
+          Huntington poderá continuar a manter os dados em razão do de
+          obrigações legais ou do interesse legítimo da empresa, para ajudar a
+          responder demandas legais e/ou auditorias e por outras causas, como
+          combater fraude e responder a solicitações de órgãos regulatórios.
         </p>
       </div>
 
@@ -132,6 +157,37 @@ export default function PrivacyPolicySection() {
           A Huntington garante ao titular de dados o exercício dos direitos
           previstos na lei aplicável, dentre eles:
         </p>
+        <ul className="list-disc list-inside space-y-2 text-xs lg:text-sm text-gray-neutral">
+          <li>A confirmação da existência de tratamento de dados pessoais;</li>
+          <li>O acesso a esses dados;</li>
+          <li>A correção de dados incompletos, inexatos ou desatualizados;</li>
+          <li>
+            A anonimização, bloqueio ou eliminação de dados desnecessários,
+            excessivos ou tratados em desconformidade com a LGPD;
+          </li>
+          <li>
+            A portabilidade de dados pessoais, mediante requisição expressa;
+          </li>
+          <li>
+            A eliminação de dados tratados com consentimento do titular, em
+            observância aos prazos de guarda aplicáveis;
+          </li>
+          <li>
+            A obtenção de informações sobre entidades públicas e privadas com os
+            quais a Huntington compartilhou os dados;
+          </li>
+          <li>
+            A obtenção de informações sobre a possibilidade de não fornecer o
+            consentimento e sobre as consequências da negativa;
+          </li>
+          <li>A revogação do consentimento, nos termos da LGPD;</li>
+          <li>
+            A revisão de decisões tomadas unicamente com base em tratamento
+            automatizado de dados pessoais que afetem os interesses do titular,
+            como decisões destinadas a definir perfis pessoais, profissionais,
+            de consumo e de crédito ou aspectos de personalidade.
+          </li>
+        </ul>
         <p className="text-xs lg:text-sm text-gray-neutral leading-6">
           Para exercer seus direitos, envie sua requisição para Eduardo Brito,
           no e-mail{" "}
@@ -156,6 +212,12 @@ export default function PrivacyPolicySection() {
           contra acessos não autorizados e contra situações acidentais ou
           ilícitas de destruição, perda, alteração, comunicação ou difusão.
         </p>
+
+        <p className="text-xs lg:text-sm text-gray-neutral leading-6">
+          Igualmente, as informações pessoais de clientes, usuários e visitantes
+          são de acesso restrito apenas aos colaboradores ou às partes que
+          precisarem dos dados para a execução e o desempenho de suas funções.
+        </p>
       </div>
 
       <div className="space-y-4">
@@ -165,6 +227,26 @@ export default function PrivacyPolicySection() {
         <p className="text-xs lg:text-sm text-gray-neutral leading-6">
           Esta Política de Privacidade pode ser atualizada periodicamente,
           hipótese em que a alteração será destacada no site da Huntington.
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        <h3 className="text-blue-normal font-semibold text-base lg:text-lg">
+          9. COMO ENTRAR EM CONTATO COM A HUNTINGTON
+        </h3>
+        <p className="text-xs lg:text-sm text-gray-neutral leading-6">
+          Em caso de dúvidas ou comentários acerca desta Política de
+          Privacidade, ou se você for titular de dados e quiser exercer seus
+          direitos e ter acesso a mais informações sobre o tratamento de dados
+          pessoais pela empresa, envie um e-mail para o Encarregado da
+          Huntington: Eduardo Brito –{" "}
+          <a
+            href="mailto:dpo@huntington.com.br"
+            className="text-blue-normal underline"
+          >
+            dpo@huntington.com.br
+          </a>
+          .
         </p>
       </div>
     </section>
