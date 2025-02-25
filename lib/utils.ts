@@ -101,7 +101,7 @@ export const medicalTeam = [
     register: "CRM: 58.933",
     rqe: "RQE: 436.811",
     resume:
-      "Especialidade em Reproduçãoa Assistida e Corresponsável pelo ProFIV",
+      "Especialidade em Reprodução Assistida e Corresponsável pelo ProFIV",
     video: "https://www.youtube.com/embed/MuQ60KX_AlU",
     lattes: [
       "Fundador da Huntington;",
