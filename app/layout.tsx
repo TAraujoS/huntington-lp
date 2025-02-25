@@ -29,19 +29,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={rubik.className}>
-      <Script
-        type="text/javascript"
-        async
-        src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/30c67d99-c436-4075-8903-a4298085cdf6-loader.js"
-      ></Script>
-      <Script
-        src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
-        strategy="lazyOnload"
-        type="text/javascript"
-        async
-      />
-      <Script id="meta-pixel-code" strategy="afterInteractive">
-        {`
+      <head>
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-M92BLF2D');
+          `}
+        </Script>
+        <Script id="meta-pixel-code" strategy="afterInteractive">
+          {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -53,12 +52,29 @@ export default function RootLayout({
             fbq('init', '922731863058737');
             fbq('track', 'PageView');
           `}
-      </Script>
+        </Script>
+        <Script
+          type="text/javascript"
+          async
+          src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/30c67d99-c436-4075-8903-a4298085cdf6-loader.js"
+        />
+        <Script
+          src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"
+          strategy="lazyOnload"
+          type="text/javascript"
+          async
+        />
+      </head>
 
       <body className="min-h-screen">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M92BLF2D"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <noscript>
           <Image
             height="1"
@@ -68,6 +84,10 @@ export default function RootLayout({
             alt=""
           />
         </noscript>
+
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
