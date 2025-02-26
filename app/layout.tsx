@@ -23,8 +23,6 @@ export const metadata: Metadata = {
   keywords: "infertilidade feminina",
 };
 
-//"GTM-M92BLF2D"
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={rubik.className}>
       <head>
-        <GoogleTagManager gtmId="G-1WVFMTV3FK" />
+        <GoogleTagManager gtmId="GTM-M92BLF2D" />
         <Script id="meta-pixel-code" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
