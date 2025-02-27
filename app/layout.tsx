@@ -14,9 +14,9 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "Infertilidade Feminina: Tratamento Especializado | ProFIV",
+  title: "Infertilidade: Tratamento Especializado | ProFIV",
   description:
-    "Encontre na ProFIV as melhores soluções para infertilidade feminina! Tratamentos inovadores para transformar seu sonho em realidade. Agende sua consulta!",
+    "Encontre na ProFIV as melhores soluções para infertilidade! Tratamentos inovadores para transformar seu sonho em realidade. Agende sua consulta!",
   icons: {
     icon: "/favicon.ico",
   },

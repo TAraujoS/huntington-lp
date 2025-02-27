@@ -30,7 +30,7 @@ export const Footer = () => {
           height={100}
         />
         <h1 className="w-full mx-auto text-start text-base lg:text-lg font-semibold text-gray-neutral">
-          Infertilidade Feminina: A ProFIV Tem a Solução Para Você!
+          Infertilidade: A ProFIV Tem a Solução Para Você!
         </h1>
       </div>
 
