@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  keywords: "infertilidade feminina",
+  keywords: "infertilidade feminina, infertilidade",
 };
 
 export default function RootLayout({
